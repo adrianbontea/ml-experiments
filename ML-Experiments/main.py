@@ -1,11 +1,12 @@
-import gc
+import multiprocessing
 
 from californiahousing.dataanalysis import DataAnalysisExperiment
 
 exp = DataAnalysisExperiment()
-exp.run()
 
-exp = None
-gc.collect()
+if __name__ == '__main__':
+    data_analysis_process = multiprocessing.Process(target=exp.run)
+    data_analysis_process.start()
+
 
 
