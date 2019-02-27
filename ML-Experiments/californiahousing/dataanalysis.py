@@ -1,10 +1,9 @@
-from base.base import ExperimentBase
-import californiahousing.helpers as hlp
+from californiahousing.base import HousingExperimentBase
 import matplotlib.pyplot as plt
 
-class DataAnalysisExperiment(ExperimentBase):
+class DataAnalysisExperiment(HousingExperimentBase):
     def run(self):    
-        data = hlp.load_housing_data()
+        data = super().load_housing_data()
 
         # Analize the housing data
         print("Quick peek at top 5 instances (districts):")
@@ -31,7 +30,7 @@ class DataAnalysisExperiment(ExperimentBase):
         print("Query: Districts with Median Income > 10:")
         print(data[data.median_income > 10])
 
-        train_set, test_set = hlp.get_train_test(data, 0.2)
+        train_set, test_set = super().get_train_test(data, 0.2)
         print("Train set size is " + str(len(train_set)))
         print("Test set size is " + str(len(test_set)))
 

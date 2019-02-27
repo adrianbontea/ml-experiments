@@ -31,7 +31,7 @@
     <Compile Include="californiahousing\dataanalysis.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="californiahousing\helpers.py">
+    <Compile Include="californiahousing\base.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="californiahousing\__init__.py">
