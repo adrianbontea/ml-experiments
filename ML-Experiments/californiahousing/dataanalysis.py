@@ -1,4 +1,4 @@
-from base.experimentbase import ExperimentBase
+from base.base import ExperimentBase
 import californiahousing.helpers as hlp
 import matplotlib.pyplot as plt
 
