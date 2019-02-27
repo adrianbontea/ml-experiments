@@ -1,4 +1,4 @@
-from base.ExperimentBase import ExperimentBase
+from base.experimentbase import ExperimentBase
 import californiahousing.helpers as hlp
 import matplotlib.pyplot as plt
 
@@ -35,5 +35,7 @@ class DataAnalysisExperiment(ExperimentBase):
         train_set, test_set = hlp.get_train_test(data, 0.2)
         print("Train set size is " + str(len(train_set)))
         print("Test set size is " + str(len(test_set)))
+
+        train_set_copy = train_set.copy()
 
 

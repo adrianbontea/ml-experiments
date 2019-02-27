@@ -1,4 +1,4 @@
-from californiahousing.DataAnalysisExperiment import DataAnalysisExperiment
+from californiahousing.dataanalysisexperiment import DataAnalysisExperiment
 
 exp = DataAnalysisExperiment()
 exp.run()
