@@ -22,6 +22,15 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="base\ExperimentBase.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="base\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="californiahousing\DataAnalysisExperiment.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="californiahousing\helpers.py">
       <SubType>Code</SubType>
     </Compile>
@@ -42,6 +51,7 @@
     </Interpreter>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="base\" />
     <Folder Include="californiahousing\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
