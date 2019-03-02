@@ -1,8 +1,12 @@
+import asyncio
 from californiahousing.base import HousingExperimentBase
 import matplotlib.pyplot as plt
 
 class DataAnalysisExperiment(HousingExperimentBase):
-    def run(self):    
+    async def run_async(self):    
+        await asyncio.create_task(self.__do_run_async())
+
+    async def __do_run_async(self):
         data = super().load_housing_data()
 
         # Analize the housing data
@@ -55,5 +59,3 @@ class DataAnalysisExperiment(HousingExperimentBase):
         train_set_copy["rooms_per_household"] = train_set_copy["total_rooms"]/train_set_copy["households"]
         correlation_matrix = train_set_copy.corr()
         print(correlation_matrix["median_house_value"].sort_values(ascending=False))
-
-

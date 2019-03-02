@@ -1,7 +1,11 @@
+import asyncio
 from californiahousing.preprocessing import PreProcessingExperiment
 
-exp = PreProcessingExperiment()
-exp.run()
+async def main():
+    exp = PreProcessingExperiment()
+    await exp.run_async()
+
+asyncio.run(main())
 
 
 

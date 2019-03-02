@@ -2,7 +2,7 @@ from abc import ABC, abstractmethod
 
 class ExperimentBase(ABC):
     @abstractmethod
-    def run(self):
+    async def run_async(self):
         pass
 
 
