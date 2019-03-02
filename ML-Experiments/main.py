@@ -1,6 +1,7 @@
 import asyncio
 from californiahousing.dataanalysis import DataAnalysisExperiment
 from californiahousing.preprocessing import PreProcessingExperiment
+from californiahousing.models import ModelsExperiment
 import dependency_injector.containers as containers
 import dependency_injector.providers as providers
 
@@ -14,9 +15,10 @@ class ExperimentRunner:
 class ExperimentsContainer(containers.DeclarativeContainer):
     data_analysis = providers.Factory(DataAnalysisExperiment)
     preprocessing = providers.Factory(PreProcessingExperiment)
+    models = providers.Factory(ModelsExperiment)
 
 class RunnersContainer(containers.DeclarativeContainer):
-    instance = providers.Factory(ExperimentRunner, experiment = ExperimentsContainer.data_analysis)
+    instance = providers.Factory(ExperimentRunner, experiment = ExperimentsContainer.models)
 
 async def main():
     runner = RunnersContainer.instance()

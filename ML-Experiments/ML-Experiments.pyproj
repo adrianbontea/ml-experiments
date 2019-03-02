@@ -34,6 +34,9 @@
     <Compile Include="californiahousing\base.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="californiahousing\models.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="californiahousing\preprocessing.py">
       <SubType>Code</SubType>
     </Compile>
