@@ -1,12 +1,8 @@
-import asyncio
 from californiahousing.base import HousingExperimentBase
 import matplotlib.pyplot as plt
 
 class DataAnalysisExperiment(HousingExperimentBase):
-    async def run_async(self):    
-        await asyncio.create_task(self.__do_run_async())
-
-    async def __do_run_async(self):
+    async def do_run_async(self):
         data = super().load_housing_data()
 
         # Analize the housing data

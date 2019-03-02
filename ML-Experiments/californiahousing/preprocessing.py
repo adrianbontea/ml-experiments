@@ -4,7 +4,6 @@ from sklearn.preprocessing import LabelEncoder, LabelBinarizer, StandardScaler, 
 from sklearn.pipeline import Pipeline, FeatureUnion
 from sklearn.base import BaseEstimator, TransformerMixin
 import pandas as pd
-import asyncio
 
 class DataFrameSelector(BaseEstimator, TransformerMixin):
     def __init__(self, attribute_names):
@@ -16,11 +15,8 @@ class DataFrameSelector(BaseEstimator, TransformerMixin):
     def transform(self, X):
         return X[self.attribute_names].values
 
-class PreProcessingExperiment(HousingExperimentBase):
-    async def run_async(self):
-        await asyncio.create_task(self.__do_run_async())
-    
-    async def __do_run_async(self):
+class PreProcessingExperiment(HousingExperimentBase): 
+    async def do_run_async(self):
         data = super().load_housing_data()
         train_set, test_set = super().get_train_test(data, 0.2)
 
