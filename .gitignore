@@ -23,7 +23,7 @@ bld/
 [Oo]bj/
 
 # Virtual Environment
-virtual-env/
+venv/
 
 # Visual Studio 2015 cache/options directory
 .vs/

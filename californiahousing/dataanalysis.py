@@ -1,11 +1,12 @@
 from californiahousing.base import HousingExperimentBase
 import matplotlib.pyplot as plt
 
+
 class DataAnalysisExperiment(HousingExperimentBase):
     async def do_run_async(self):
         data = super().load_housing_data()
 
-        # Analize the housing data
+        # Analyze the housing data
         print("Quick peek at top 5 instances (districts):")
         print(data.head())
 
@@ -16,13 +17,13 @@ class DataAnalysisExperiment(HousingExperimentBase):
         print(data.describe())
 
         print("Slice a smaller DataFrame and plot:")
-        data[["median_house_value","median_income"]].hist()
+        data[["median_house_value", "median_income"]].hist()
 
         print("Slice first 3 rows:")
         print(data[0:3])
 
         print("Slice first 3 rows and 5 columns:")
-        print(data.iloc[0:3,0:5])
+        print(data.iloc[0:3, 0:5])
 
         print("Query: Districts with Median Income == 10:")
         print(data[data.median_income == 10])
@@ -39,19 +40,20 @@ class DataAnalysisExperiment(HousingExperimentBase):
         train_set_copy.plot(kind="scatter", x="longitude", y="latitude", alpha=0.1)
 
         train_set_copy.plot(kind="scatter", x="longitude", y="latitude", alpha=0.4,
-                    s=train_set_copy.population/100, label="population",
-                    c="median_house_value", cmap=plt.get_cmap("jet"), colorbar=True)
-        
+                            s=train_set_copy.population / 100, label="population",
+                            c="median_house_value", cmap=plt.get_cmap("jet"), colorbar=True)
+
         plt.legend()
         plt.show()
 
         correlation_matrix = train_set_copy.corr()
         print(correlation_matrix["median_house_value"].sort_values(ascending=False))
 
-        # The best correlation for predicting the median housing value seems to be with the median income attribute so plot their relation
+        # The best correlation for predicting the median housing value seems to be with the median income attribute
+        # so plot their relation
         train_set_copy.plot(kind="scatter", x="median_income", y="median_house_value", alpha=0.1)
         plt.show()
 
-        train_set_copy["rooms_per_household"] = train_set_copy["total_rooms"]/train_set_copy["households"]
+        train_set_copy["rooms_per_household"] = train_set_copy["total_rooms"] / train_set_copy["households"]
         correlation_matrix = train_set_copy.corr()
         print(correlation_matrix["median_house_value"].sort_values(ascending=False))
