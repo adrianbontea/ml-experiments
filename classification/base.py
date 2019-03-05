@@ -20,14 +20,11 @@ class ClassificationExperimentBase(ExperimentBase):
     def __load_file(self, filename):
         gz_path = os.path.join(self.__mnist_path, filename)
         if not os.path.isfile(gz_path):
-            self.__fetch_mnist_data()
+            self.__download_mnist_file(filename)
         fd = gzip.open(gz_path)
         return parse_idx(fd)
 
-    def __fetch_mnist_data(self):
+    def __download_mnist_file(self, filename):
         if not os.path.isdir(self.__mnist_path):
             os.makedirs(self.__mnist_path)
-        download_file("train-images-idx3-ubyte.gz", self.__mnist_path)
-        download_file("train-labels-idx1-ubyte.gz", self.__mnist_path)
-        download_file("t10k-images-idx3-ubyte.gz", self.__mnist_path)
-        download_file("t10k-labels-idx1-ubyte.gz", self.__mnist_path)
+        download_file(filename, self.__mnist_path)
