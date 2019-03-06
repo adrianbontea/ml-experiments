@@ -44,7 +44,7 @@ class BinaryClassificationExperiment(ClassificationExperimentBase):
 
         # For random_state = 77 we get
         # [[54168   411]
-        #  [ 1762  3659]]
+        # [ 1762  3659]]
         # Each row represents an actual class (being a binary classifier only two classes: 0 and 1 top-down)
         # and each column represents a predicted class (0 and 1 left-right)
         # That is 54168 true negatives, 411 false positives, 1762 false negatives and 3659 true positives
