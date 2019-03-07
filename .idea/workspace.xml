@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="afbad002-6eb2-4efd-a8ac-75a5f9b77985" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/classification/binary.py" beforeDir="false" afterPath="$PROJECT_DIR$/classification/binary.py" afterDir="false" />
     </list>
@@ -18,8 +17,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/classification/binary.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="661">
-              <caret line="130" column="47" lean-forward="true" selection-start-line="130" selection-start-column="47" selection-end-line="130" selection-end-column="47" />
+            <state relative-caret-position="386">
+              <caret line="114" column="75" lean-forward="true" selection-start-line="114" selection-start-column="75" selection-end-line="114" selection-end-column="75" />
               <folding>
                 <element signature="e#0#60#0" expanded="true" />
               </folding>
@@ -219,7 +218,14 @@
       <option name="project" value="LOCAL" />
       <updated>1551904195759</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Finished BinaryClassificationExperiment with Precision-Recall(Sensitivity) Tradeoff">
+      <created>1551993311821</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1551993311821</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TodoView">
@@ -331,7 +337,8 @@
     <MESSAGE value="Extended BinaryClassificationExperiment with binary classification of MNIST images (5 and not 5) based on Stochastic Gradient Descent Classifier" />
     <MESSAGE value="Introduced performance metrics in binary classification (confusion matrix, precision, sensitivity and f1 score)" />
     <MESSAGE value="Minor formatting" />
-    <option name="LAST_COMMIT_MESSAGE" value="Minor formatting" />
+    <MESSAGE value="Finished BinaryClassificationExperiment with Precision-Recall(Sensitivity) Tradeoff" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished BinaryClassificationExperiment with Precision-Recall(Sensitivity) Tradeoff" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$USER_HOME$/.PyCharmCE2018.3/system/python_stubs/-1246067404/dependency_injector/containers.py">
@@ -516,8 +523,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/classification/binary.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="661">
-          <caret line="130" column="47" lean-forward="true" selection-start-line="130" selection-start-column="47" selection-end-line="130" selection-end-column="47" />
+        <state relative-caret-position="386">
+          <caret line="114" column="75" lean-forward="true" selection-start-line="114" selection-start-column="75" selection-end-line="114" selection-end-column="75" />
           <folding>
             <element signature="e#0#60#0" expanded="true" />
           </folding>

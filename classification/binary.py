@@ -103,7 +103,7 @@ class BinaryClassificationExperiment(ClassificationExperimentBase):
         # Note ndarrays of precision and recall (dimension 1) are one element larger than thresholds
         # so we select all but last element
 
-        thresholds_for_precision_and_recall = self.__get_threholds_for(precisions[:-1], recalls[:-1], thresholds, 0.88, 0.70)
+        thresholds_for_precision_and_recall = self.__get_thresholds_for(precisions[:-1], recalls[:-1], thresholds, 0.88, 0.70)
         print("Thresholds for Precision at least 0.88 and Recall at least 0.7 are:", thresholds_for_precision_and_recall)
 
         # We get 33 possible threshold values for which the precision would be at least 88% and recall at least 70%
@@ -123,7 +123,7 @@ class BinaryClassificationExperiment(ClassificationExperimentBase):
         indexes_of_falses = np.where(binary_labels == False)[0]
         return indexes_of_falses[np.random.randint(0, len(indexes_of_falses) - 1)]
 
-    def __get_threholds_for(self, precisions, recalls, thresholds, precision_at_least, recall_at_least):
+    def __get_thresholds_for(self, precisions, recalls, thresholds, precision_at_least, recall_at_least):
         indexes_precisions = np.where(precisions > precision_at_least)[0]
         indexes_recalls = np.where(recalls > recall_at_least)[0]
         intersection_indexes = np.intersect1d(indexes_precisions, indexes_recalls)
