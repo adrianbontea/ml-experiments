@@ -5,6 +5,7 @@ from californiahousing.models import ModelsExperiment
 from classification.binary import BinaryClassificationExperiment
 from classification.multiclass import MulticlassClassificationExperiment
 from classification.multilabel import MultilabelClassificationExperiment
+from classification.multioutput import MultioutputClassificationExperiment
 import dependency_injector.containers as containers
 import dependency_injector.providers as providers
 
@@ -24,6 +25,7 @@ class ExperimentsContainer(containers.DeclarativeContainer):
     binary_classification = providers.Factory(BinaryClassificationExperiment)
     multiclass_classification = providers.Factory(MulticlassClassificationExperiment)
     multilabel_classification = providers.Factory(MultilabelClassificationExperiment)
+    multioutput_classification = providers.Factory(MultioutputClassificationExperiment)
 
 
 class RunnersContainer(containers.DeclarativeContainer):
