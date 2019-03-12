@@ -1,5 +1,6 @@
 from mnist import *
 from base.base import ExperimentBase
+import numpy as np
 
 
 class ClassificationExperimentBase(ExperimentBase):
@@ -16,6 +17,10 @@ class ClassificationExperimentBase(ExperimentBase):
 
     def load_test_labels(self):
         return self.__load_file("t10k-labels-idx1-ubyte.gz")
+
+    def get_random_digit(self, training_set, labels, digit):
+        indexes = np.where(labels == digit)[0]
+        return training_set[indexes[np.random.randint(0, len(indexes) - 1)]]
 
     def __load_file(self, filename):
         gz_path = os.path.join(self.__mnist_path, filename)

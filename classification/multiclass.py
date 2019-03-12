@@ -1,11 +1,10 @@
-from classification.base import ClassificationExperimentBase
-import numpy as np
-from sklearn.linear_model import SGDClassifier
-from sklearn.multiclass import OneVsOneClassifier
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.model_selection import cross_val_predict
-from sklearn.metrics import confusion_matrix
 import pickle
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.linear_model import SGDClassifier
+from sklearn.metrics import confusion_matrix
+from sklearn.model_selection import cross_val_predict
+from sklearn.multiclass import OneVsOneClassifier
+from classification.base import ClassificationExperimentBase
 
 
 class MulticlassClassificationExperiment(ClassificationExperimentBase):
@@ -25,7 +24,7 @@ class MulticlassClassificationExperiment(ClassificationExperimentBase):
         sgd_classifier = SGDClassifier(random_state=77)
         sgd_classifier.fit(training_set_tr, training_labels)
 
-        seven = self.__get_random_digit(training_set_tr, training_labels, 7)
+        seven = super().get_random_digit(training_set_tr, training_labels, 7)
         print("The digit is:", sgd_classifier.predict([seven]))
 
         # Get the classifier to return the decision scores for each class rather than a prediction
@@ -67,8 +66,3 @@ class MulticlassClassificationExperiment(ClassificationExperimentBase):
         rnd_forest_2 = pickle.load(file2)
         file2.close()
         print("Random Forest Persisted: The digit is:", rnd_forest_2.predict([seven]))
-
-
-    def __get_random_digit(self, training_set, labels, digit):
-        indexes = np.where(labels == digit)[0]
-        return training_set[indexes[np.random.randint(0, len(indexes) - 1)]]

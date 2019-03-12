@@ -4,6 +4,7 @@ from californiahousing.preprocessing import PreProcessingExperiment
 from californiahousing.models import ModelsExperiment
 from classification.binary import BinaryClassificationExperiment
 from classification.multiclass import MulticlassClassificationExperiment
+from classification.multilabel import MultilabelClassificationExperiment
 import dependency_injector.containers as containers
 import dependency_injector.providers as providers
 
@@ -22,10 +23,11 @@ class ExperimentsContainer(containers.DeclarativeContainer):
     models = providers.Factory(ModelsExperiment)
     binary_classification = providers.Factory(BinaryClassificationExperiment)
     multiclass_classification = providers.Factory(MulticlassClassificationExperiment)
+    multilabel_classification = providers.Factory(MultilabelClassificationExperiment)
 
 
 class RunnersContainer(containers.DeclarativeContainer):
-    instance = providers.Factory(ExperimentRunner, experiment=ExperimentsContainer.multiclass_classification)
+    instance = providers.Factory(ExperimentRunner, experiment=ExperimentsContainer.multilabel_classification)
 
 
 async def main():
