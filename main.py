@@ -29,7 +29,7 @@ class ExperimentsContainer(containers.DeclarativeContainer):
 
 
 class RunnersContainer(containers.DeclarativeContainer):
-    instance = providers.Factory(ExperimentRunner, experiment=ExperimentsContainer.multilabel_classification)
+    instance = providers.Factory(ExperimentRunner, experiment=ExperimentsContainer.multioutput_classification)
 
 
 async def main():
