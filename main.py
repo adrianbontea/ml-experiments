@@ -6,6 +6,7 @@ from classification.binary import BinaryClassificationExperiment
 from classification.multiclass import MulticlassClassificationExperiment
 from classification.multilabel import MultilabelClassificationExperiment
 from classification.multioutput import MultioutputClassificationExperiment
+from whitebox.linearregression import LinearRegressionNormalEquationExperiment
 import dependency_injector.containers as containers
 import dependency_injector.providers as providers
 
@@ -26,10 +27,11 @@ class ExperimentsContainer(containers.DeclarativeContainer):
     multiclass_classification = providers.Factory(MulticlassClassificationExperiment)
     multilabel_classification = providers.Factory(MultilabelClassificationExperiment)
     multioutput_classification = providers.Factory(MultioutputClassificationExperiment)
+    whitebox_linear_regression_normal_equation = providers.Factory(LinearRegressionNormalEquationExperiment)
 
 
 class RunnersContainer(containers.DeclarativeContainer):
-    instance = providers.Factory(ExperimentRunner, experiment=ExperimentsContainer.multioutput_classification)
+    instance = providers.Factory(ExperimentRunner, experiment=ExperimentsContainer.whitebox_linear_regression_normal_equation)
 
 
 async def main():
