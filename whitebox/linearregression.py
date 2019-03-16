@@ -83,13 +83,42 @@ class LinearRegressionExperiment(ExperimentBase):
             gradients = 2 / m * X_b.T.dot(X_b.dot(theta) - y)
             theta = theta - eta * gradients
 
-        print("Parameters vector as determined by the normal equation:", theta)
+        print("Parameters vector as determined by Batch Gradient Descent:", theta)
         # These should be precisely the values determined by the normal equation!
         # Note: if theta best is found before number of steps is hit (1000 in this case)
         # theta next should be equal to theta since the gradients vector will be all 0!
         # remember that the derivative of a function determines the slope of the tangent in a certain point
         # so for a global minimum point the inclination should be 0!
 
+        # Batch Gradient Descent is very slow when the training set is large as it uses the whole set on each iteration
+        # Stochastic (Random) Gradient Descent is a similar algorithm but uses a single instance,
+        # randomly chosen from the training set, on each iteration, to compute the gradients vector and theta next.
+        # It is much faster but less accurate. To avoid bouncing around after finding the best parameters vector that minimizes
+        # the MSE function, the eta (learning rate) is gradually reduced in a process called learning schedule.
+        # This process is called simulated annealing, because it resembles the process of annealing in metallurgy
+        # where molten metal is slowly cooled down.
 
+        # By convention we iterate by rounds of m iterations; each round is called an epoch.
+        # While the Batch Gradient Descent code iterated 1,000 times through the whole training
+        # set, this code goes through the training set only 50 times and reaches a fairly good solution
+
+        n_epochs = 50
+
+        def learning_schedule(t):  # Local function
+            t0, t1 = 5, 50
+            return t0 / (t + t1)
+
+        theta = np.random.randn(2, 1)  # random initialization
+
+        for epoch in range(n_epochs):
+            for i in range(m):
+                random_index = np.random.randint(m)
+                xi = np.array([X_b[random_index]])
+                yi = np.array([y[random_index]])
+                gradients = 2 * xi.T.dot(xi.dot(theta) - yi)
+                eta = learning_schedule(epoch * m + i)  # This will gradually reduce eta on each epoch as i increases and globally as epoch increases
+                theta = theta - eta * gradients
+
+        print("Parameters vector as determined by Stochastic Gradient Descent:", theta)
 
 
