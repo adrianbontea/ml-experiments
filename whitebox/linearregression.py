@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 from sklearn.linear_model import LinearRegression
 
 
-class LinearRegressionNormalEquationExperiment(ExperimentBase):
+class LinearRegressionExperiment(ExperimentBase):
     async def do_run_async(self):
         # Generate some linear-looking data to test the normal equation
         # Note: X is a ndarray of shape (100,1) simulating a training set of 100 instances with one feature each
@@ -55,6 +55,41 @@ class LinearRegressionNormalEquationExperiment(ExperimentBase):
         # you want to make predictions on and the number of features.
         # In other words, making predictions on twice as many
         # instances (or twice as many features) will just take roughly twice as much time.
+
+        # Fit the training set (determine theta best) using Batch Gradient Descent.
+        # The result should be the same as normal equation
+        # Batch gradient descent involves computing the derivative of the MSE cost function
+        # with respect to each parameter from the parameters vector at each training step!
+        # That is because the derivative of a function determines the slope of the tangent
+        # to the function curve in a certain point. Hence these partial derivatives are about determining
+        # the slope of the cost function with regards to each axis
+        # represented by each model parameter, trying to reach a global minimum for the cost function.
+        # For a certain parameter theta j, the derivative (gradient) will be: 2/m * Sum i=1 -> m(Theta T * xi - yi)*xi,j (feature j from instance i)
+        # A vector of all these gradients for the whole training set: 2/m * X T *(X * Theta - y)
+
+        # This is why the algorithm is called Batch Gradient Descent: it uses the whole batch of training
+        # data at every step. As a result it is terribly slow on very large training
+        # sets. However, Gradient Descent scales well with the number of
+        # features; training a Linear Regression model when there are hundreds of thousands of features
+        # is much faster using Gradient Descent than using the Normal Equation.
+
+        eta = 0.1  # learning rate
+        n_iterations = 1000
+        m = 100
+
+        theta = np.random.randn(2, 1)  # random initialization
+
+        for iteration in range(n_iterations):
+            gradients = 2 / m * X_b.T.dot(X_b.dot(theta) - y)
+            theta = theta - eta * gradients
+
+        print("Parameters vector as determined by the normal equation:", theta)
+        # These should be precisely the values determined by the normal equation!
+        # Note: if theta best is found before number of steps is hit (1000 in this case)
+        # theta next should be equal to theta since the gradients vector will be all 0!
+        # remember that the derivative of a function determines the slope of the tangent in a certain point
+        # so for a global minimum point the inclination should be 0!
+
 
 
 

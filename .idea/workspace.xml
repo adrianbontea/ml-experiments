@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="afbad002-6eb2-4efd-a8ac-75a5f9b77985" name="Default Changelist" comment="MultioutputClassificationExperiment and adjusted MultilabelClassificationExperiment">
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/Adrian_Bontea.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/whitebox/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/whitebox/linearregression.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+    <list default="true" id="afbad002-6eb2-4efd-a8ac-75a5f9b77985" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/whitebox/linearregression.py" beforeDir="false" afterPath="$PROJECT_DIR$/whitebox/linearregression.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,12 +14,24 @@
   </component>
   <component name="ChangesViewManager" show_ignored="true" />
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/whitebox/linearregression.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="561">
+              <caret line="89" column="74" selection-start-line="89" selection-start-column="74" selection-end-line="89" selection-end-column="74" />
+              <folding>
+                <element signature="e#0#36#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="638">
-              <caret line="29" column="19" selection-start-line="29" selection-start-column="19" selection-end-line="29" selection-end-column="19" />
+            <state relative-caret-position="520">
+              <caret line="29" column="21" selection-start-line="29" selection-start-column="21" selection-end-line="29" selection-end-column="21" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -30,13 +39,13 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/whitebox/linearregression.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/californiahousing/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="34" column="33" selection-start-line="34" selection-start-column="33" selection-end-line="34" selection-end-column="33" />
+            <state relative-caret-position="-109">
+              <caret line="97" column="55" selection-start-line="97" selection-start-column="55" selection-end-line="97" selection-end-column="55" />
               <folding>
-                <element signature="e#0#36#0" expanded="true" />
+                <element signature="e#0#18#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -92,6 +101,11 @@
             <path>
               <item name="ml-experiments" type="b2602c69:ProjectViewProjectNode" />
               <item name="ml-experiments" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ml-experiments" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ml-experiments" type="462c0819:PsiDirectoryNode" />
+              <item name="californiahousing" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ml-experiments" type="b2602c69:ProjectViewProjectNode" />
@@ -273,7 +287,14 @@
       <option name="project" value="LOCAL" />
       <updated>1552422007195</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="White box-type experiment with a linear regression model fitting based on normal equation">
+      <created>1552593129886</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1552593129886</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TodoView">
@@ -307,7 +328,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Project" order="3" visible="true" weight="0.29530916" />
+      <window_info anchor="right" content_ui="combo" id="Project" order="3" visible="true" weight="0.29850745" />
     </layout>
     <layout-to-restore>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25237092" />
@@ -390,7 +411,8 @@
     <MESSAGE value="MulticlassClassificationExperiment" />
     <MESSAGE value="MultilabelClassificationExperiment" />
     <MESSAGE value="MultioutputClassificationExperiment and adjusted MultilabelClassificationExperiment" />
-    <option name="LAST_COMMIT_MESSAGE" value="MultioutputClassificationExperiment and adjusted MultilabelClassificationExperiment" />
+    <MESSAGE value="White box-type experiment with a linear regression model fitting based on normal equation" />
+    <option name="LAST_COMMIT_MESSAGE" value="White box-type experiment with a linear regression model fitting based on normal equation" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$USER_HOME$/.PyCharmCE2018.3/system/python_stubs/-1246067404/dependency_injector/containers.py">
@@ -588,16 +610,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/californiahousing/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1649">
-          <caret line="97" column="55" selection-start-line="97" selection-start-column="55" selection-end-line="97" selection-end-column="55" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/classification/multioutput.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="352">
@@ -628,10 +640,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/californiahousing/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-109">
+          <caret line="97" column="55" selection-start-line="97" selection-start-column="55" selection-end-line="97" selection-end-column="55" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="638">
-          <caret line="29" column="19" selection-start-line="29" selection-start-column="19" selection-end-line="29" selection-end-column="19" />
+        <state relative-caret-position="520">
+          <caret line="29" column="21" selection-start-line="29" selection-start-column="21" selection-end-line="29" selection-end-column="21" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>
@@ -640,8 +662,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/whitebox/linearregression.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="34" column="33" selection-start-line="34" selection-start-column="33" selection-end-line="34" selection-end-column="33" />
+        <state relative-caret-position="561">
+          <caret line="89" column="74" selection-start-line="89" selection-start-column="74" selection-end-line="89" selection-end-column="74" />
           <folding>
             <element signature="e#0#36#0" expanded="true" />
           </folding>
