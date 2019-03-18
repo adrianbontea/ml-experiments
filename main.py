@@ -7,6 +7,7 @@ from classification.multiclass import MulticlassClassificationExperiment
 from classification.multilabel import MultilabelClassificationExperiment
 from classification.multioutput import MultioutputClassificationExperiment
 from whitebox.linearregression import LinearRegressionExperiment
+from whitebox.polynomialregression import PolynomialRegressionExperiment
 import dependency_injector.containers as containers
 import dependency_injector.providers as providers
 
@@ -28,10 +29,11 @@ class ExperimentsContainer(containers.DeclarativeContainer):
     multilabel_classification = providers.Factory(MultilabelClassificationExperiment)
     multioutput_classification = providers.Factory(MultioutputClassificationExperiment)
     whitebox_linear_regression = providers.Factory(LinearRegressionExperiment)
+    whitebox_polynomial_regression = providers.Factory(PolynomialRegressionExperiment)
 
 
 class RunnersContainer(containers.DeclarativeContainer):
-    instance = providers.Factory(ExperimentRunner, experiment=ExperimentsContainer.whitebox_linear_regression)
+    instance = providers.Factory(ExperimentRunner, experiment=ExperimentsContainer.whitebox_polynomial_regression)
 
 
 async def main():
