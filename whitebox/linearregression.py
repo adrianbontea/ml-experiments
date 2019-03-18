@@ -58,8 +58,8 @@ class LinearRegressionExperiment(ExperimentBase):
 
         # Fit the training set (determine theta best) using Batch Gradient Descent.
         # The result should be the same as normal equation
-        # Batch gradient descent involves computing the derivative of the MSE cost function
-        # with respect to each parameter from the parameters vector at each training step!
+        # Batch gradient descent involves computing the partial derivatives of the MSE cost function
+        # with respect to each parameter and then the value of the derivatives in point theta (coordinates) at each training step!
         # That is because the derivative of a function determines the slope of the tangent
         # to the function curve in a certain point. Hence these partial derivatives are about determining
         # the slope of the cost function with regards to each axis
@@ -113,12 +113,32 @@ class LinearRegressionExperiment(ExperimentBase):
         for epoch in range(n_epochs):
             for i in range(m):
                 random_index = np.random.randint(m)
-                xi = np.array([X_b[random_index]])
-                yi = np.array([y[random_index]])
+                xi = np.array([X_b[random_index, ]])
+                yi = np.array([y[random_index, ]])
                 gradients = 2 * xi.T.dot(xi.dot(theta) - yi)
                 eta = learning_schedule(epoch * m + i)  # This will gradually reduce eta on each epoch as i increases and globally as epoch increases
                 theta = theta - eta * gradients
 
         print("Parameters vector as determined by Stochastic Gradient Descent:", theta)
+
+        # Min-Batch Gradient Descent is a common ground between Batch and Stochastic Gradient Decent algorithms
+        # At each training step will compute the gradients based on a mini batch from the training set
+
+        mini_batch_size = 50
+        n_iterations = 500
+        eta = 0.1  # learning rate
+        theta = np.random.randn(2, 1)  # random initialization
+
+        for i in range(n_iterations):
+            from_index = np.random.randint(0, 74)
+            to_index = from_index + mini_batch_size
+            mini_batch_x = X_b[from_index:to_index, :]
+            mini_batch_y = y[from_index:to_index, :]
+            gradients = 2 / mini_batch_size * mini_batch_x.T.dot(mini_batch_x.dot(theta) - mini_batch_y)
+            theta = theta - eta * gradients
+
+        print("Parameters vector as determined by Mini-Batch Gradient Descent:", theta)
+
+
 
 
