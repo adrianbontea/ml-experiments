@@ -32,5 +32,5 @@ class LogisticRegressionExperiment(ExperimentBase):
 
         # X_new = np.array(X_new)
         # X_new = X_new.reshape((20, 1))
-        print("Logistic Regression Computed Probabilities:", log_reg.predict_proba(X_new))
-        print("Logistic Regression Predictions:", log_reg.predict(X_new))
+        print("Logistic Regression Predicted Probabilities:", log_reg.predict_proba(X_new))
+        print("Logistic Regression Predicted Binary Labels:", log_reg.predict(X_new))
