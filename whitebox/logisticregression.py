@@ -43,3 +43,15 @@ class LogisticRegressionExperiment(ExperimentBase):
         X_new = np.random.uniform(0, 5, (20, 4))
 
         print("Trained with all features. Logistic Regression Predicted Binary Labels:", log_reg.predict(X_new))
+
+        # Softmax Regression (Multinomial Logistic Regression) (Generalize Logistic Regression to multiclass classification)
+        X = iris.data
+        y = iris.target
+
+        softmax_reg = LogisticRegression(multi_class="multinomial", solver="lbfgs", C=100)
+        softmax_reg.fit(X, y)
+
+        print("Softmax prediction for a flower with sepal and petal length = 5 and width = 2:", iris.target_names[softmax_reg.predict([[5, 2, 5, 2]])[0]])
+
+
+
