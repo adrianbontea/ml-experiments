@@ -32,5 +32,14 @@ class LogisticRegressionExperiment(ExperimentBase):
 
         # X_new = np.array(X_new)
         # X_new = X_new.reshape((20, 1))
-        print("Logistic Regression Predicted Probabilities:", log_reg.predict_proba(X_new))
-        print("Logistic Regression Predicted Binary Labels:", log_reg.predict(X_new))
+        print("Trained with a single feature. Logistic Regression Predicted Probabilities:", log_reg.predict_proba(X_new))
+        print("Trained with a single feature. Logistic Regression Predicted Binary Labels:", log_reg.predict(X_new))
+
+        # Train with all the features (sepal length, sepal width, petal length, petal width)
+        X = iris.data
+        log_reg = LogisticRegression()
+        log_reg.fit(X, y)
+
+        X_new = np.random.uniform(0, 5, (20, 4))
+
+        print("Trained with all features. Logistic Regression Predicted Binary Labels:", log_reg.predict(X_new))
