@@ -4,7 +4,7 @@ from sklearn.linear_model import SGDClassifier
 from sklearn.metrics import confusion_matrix
 from sklearn.model_selection import cross_val_predict
 from sklearn.multiclass import OneVsOneClassifier
-from classification.base import ClassificationExperimentBase
+from .base import ClassificationExperimentBase
 
 
 class MulticlassClassificationExperiment(ClassificationExperimentBase):

@@ -3,7 +3,7 @@ import tarfile
 from six.moves import urllib
 import pandas as pd
 import numpy as np
-from base.base import ExperimentBase
+from base import ExperimentBase
 
 
 class HousingExperimentBase(ExperimentBase):

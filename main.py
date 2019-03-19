@@ -1,13 +1,7 @@
 import asyncio
-from californiahousing.dataanalysis import DataAnalysisExperiment
-from californiahousing.preprocessing import PreProcessingExperiment
-from californiahousing.models import ModelsExperiment
-from classification.binary import BinaryClassificationExperiment
-from classification.multiclass import MulticlassClassificationExperiment
-from classification.multilabel import MultilabelClassificationExperiment
-from classification.multioutput import MultioutputClassificationExperiment
-from whitebox.linearregression import LinearRegressionExperiment
-from whitebox.polynomialregression import PolynomialRegressionExperiment
+from californiahousing import *
+from classification import *
+from whitebox import *
 import dependency_injector.containers as containers
 import dependency_injector.providers as providers
 

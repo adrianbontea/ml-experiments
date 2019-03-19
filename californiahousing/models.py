@@ -7,7 +7,7 @@ from sklearn.model_selection import cross_val_score
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import LabelBinarizer, MinMaxScaler
 from sklearn.tree import DecisionTreeRegressor
-from californiahousing.base import HousingExperimentBase
+from .base import HousingExperimentBase
 
 
 class ModelsExperiment(HousingExperimentBase):

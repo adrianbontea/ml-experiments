@@ -1,4 +1,4 @@
-from classification.base import ClassificationExperimentBase
+from .base import ClassificationExperimentBase
 from sklearn.linear_model import SGDClassifier
 import matplotlib
 import matplotlib.pyplot as plt

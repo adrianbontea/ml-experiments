@@ -1,9 +1,8 @@
-from classification.base import ClassificationExperimentBase
+from .base import ClassificationExperimentBase
 import numpy as np
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import confusion_matrix
-from sklearn.model_selection import cross_val_predict
 
 class MultioutputClassificationExperiment(ClassificationExperimentBase):
     async def do_run_async(self):

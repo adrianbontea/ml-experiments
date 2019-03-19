@@ -1,5 +1,5 @@
 from mnist import *
-from base.base import ExperimentBase
+from base import ExperimentBase
 import numpy as np
 
 

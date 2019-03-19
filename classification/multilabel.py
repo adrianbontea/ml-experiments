@@ -1,7 +1,7 @@
 import numpy as np
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.neighbors import KNeighborsClassifier
-from classification.base import ClassificationExperimentBase
+from .base import ClassificationExperimentBase
 
 
 class MultilabelClassificationExperiment(ClassificationExperimentBase):

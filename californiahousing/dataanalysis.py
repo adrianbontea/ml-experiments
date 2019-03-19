@@ -1,4 +1,4 @@
-from californiahousing.base import HousingExperimentBase
+from .base import HousingExperimentBase
 import matplotlib.pyplot as plt
 
 

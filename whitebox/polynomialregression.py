@@ -1,4 +1,4 @@
-from base.base import ExperimentBase
+from base import ExperimentBase
 import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.preprocessing import PolynomialFeatures
