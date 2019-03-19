@@ -24,10 +24,11 @@ class ExperimentsContainer(containers.DeclarativeContainer):
     multioutput_classification = providers.Factory(MultioutputClassificationExperiment)
     whitebox_linear_regression = providers.Factory(LinearRegressionExperiment)
     whitebox_polynomial_regression = providers.Factory(PolynomialRegressionExperiment)
+    whitebox_logistic_regression = providers.Factory(LogisticRegressionExperiment)
 
 
 class RunnersContainer(containers.DeclarativeContainer):
-    instance = providers.Factory(ExperimentRunner, experiment=ExperimentsContainer.whitebox_polynomial_regression)
+    instance = providers.Factory(ExperimentRunner, experiment=ExperimentsContainer.whitebox_logistic_regression)
 
 
 async def main():
