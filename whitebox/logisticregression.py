@@ -52,6 +52,7 @@ class LogisticRegressionExperiment(ExperimentBase):
         softmax_reg.fit(X, y)
 
         print("Softmax prediction for a flower with sepal and petal length = 5 and width = 2:", iris.target_names[softmax_reg.predict([[5, 2, 5, 2]])[0]])
+        # Test change
 
 
 
