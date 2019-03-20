@@ -24,6 +24,10 @@ class PreProcessingExperiment(HousingExperimentBase):
         predictors_num = predictors.drop("ocean_proximity", axis=1)
         # Learn the medians and transform - this returns an 2-dimensional NumPy array (ndarray) of shape (16512,
         # 8) (16512 rows of instances with 8 columns) including the transformed features
+
+        # Scikit-Learn estimators/transformers/predictors work with 2 dimensional matrix-like data structures for X data set
+        # of shape (n_samples, n_features). Both a Pandas DataFrame and numpy ndarray work
+        # The _get_values method of a DataFrame returns the corresponding ndarray
         x = imputer.fit_transform(predictors_num)
         print(type(x).__name__)
         print(x.shape)

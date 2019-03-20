@@ -23,7 +23,7 @@ class BinaryClassificationExperiment(ClassificationExperimentBase):
 
         # Pick a five
         index_of_five = self.__get_index_of_random_true(five_binary_labels)
-        some_digit = training_set_tr[index_of_five]
+        some_digit = training_set_tr[index_of_five, ]
         some_digit_image = some_digit.reshape(28, 28)
         plt.imshow(some_digit_image, cmap=matplotlib.cm.binary, interpolation="nearest")
 
@@ -31,13 +31,13 @@ class BinaryClassificationExperiment(ClassificationExperimentBase):
 
         # Pick a not five
         index_of_not_five = self.__get_index_of_random_false(five_binary_labels)
-        some_digit = training_set_tr[index_of_not_five]
+        some_digit = training_set_tr[index_of_not_five, ]
         some_digit_image = some_digit.reshape(28, 28)
         plt.imshow(some_digit_image, cmap=matplotlib.cm.binary, interpolation="nearest")
 
         print("some_digit is a 5:", sgd_classifier.predict([some_digit]))
 
-        # Evaluate the current SGD regressor
+        # Evaluate the current SGD classifier
         y_train_pred = cross_val_predict(sgd_classifier, training_set_tr, five_binary_labels, cv=3)
         cm = confusion_matrix(five_binary_labels, y_train_pred)
         print("Confusion Matrix for random_state = 77:", cm)
@@ -82,7 +82,7 @@ class BinaryClassificationExperiment(ClassificationExperimentBase):
 
         # Pick a five
         index_of_five = self.__get_index_of_random_true(five_binary_labels)
-        some_digit = training_set_tr[index_of_five]
+        some_digit = training_set_tr[index_of_five, ]
 
         score = sgd_classifier.decision_function([some_digit])
         threshold = 0
