@@ -17,19 +17,30 @@ class DataAnalysisExperiment(HousingExperimentBase):
         print(data.describe())
 
         print("Slice a smaller DataFrame and plot:")
-        data[["median_house_value", "median_income"]].hist()
+        subset = data[["median_house_value", "median_income"]]
+        subset.hist()
+
+        subset = data["median_house_value"]
+        print(type(subset).__name__)  # Series
+
+        subset = data[["median_house_value"]]
+        print(type(subset).__name__)  # DataFrame
 
         print("Slice first 3 rows:")
-        print(data[0:3])
+        subset = data[0:3]
+        print(subset)
 
         print("Slice first 3 rows and 5 columns:")
-        print(data.iloc[0:3, 0:5])
+        subset = data.iloc[0:3, 0:5]
+        print(subset)
 
         print("Query: Districts with Median Income == 10:")
-        print(data[data.median_income == 10])
+        subset = data[data.median_income == 10]
+        print(subset)
 
         print("Query: Districts with Median Income > 10:")
-        print(data[data.median_income > 10])
+        subset = data[data.median_income > 10]
+        print(subset)
 
         train_set, test_set = super().get_train_test(data, 0.2)
         print("Train set size is " + str(len(train_set)))
