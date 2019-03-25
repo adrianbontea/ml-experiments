@@ -27,10 +27,11 @@ class ExperimentsContainer(containers.DeclarativeContainer):
     whitebox_polynomial_regression = providers.Factory(PolynomialRegressionExperiment)
     whitebox_logistic_regression = providers.Factory(LogisticRegressionExperiment)
     svm_linear = providers.Factory(LinearSvmClassificationExperiment)
+    svm_non_linear = providers.Factory(NonLinearSvmClassificationExperiment)
 
 
 class RunnersContainer(containers.DeclarativeContainer):
-    instance = providers.Factory(ExperimentRunner, experiment=ExperimentsContainer.svm_linear)
+    instance = providers.Factory(ExperimentRunner, experiment=ExperimentsContainer.svm_non_linear)
 
 
 async def main():
