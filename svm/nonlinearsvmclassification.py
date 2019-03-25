@@ -4,6 +4,8 @@ from sklearn.svm import LinearSVC
 from sklearn.pipeline import Pipeline
 from sklearn.datasets import make_moons
 import numpy as np
+import matplotlib.pyplot as plt
+from matplotlib.colors import ListedColormap
 
 
 class NonLinearSvmClassificationExperiment(ExperimentBase):
@@ -14,7 +16,10 @@ class NonLinearSvmClassificationExperiment(ExperimentBase):
         X = moons[0]
         y = moons[1]
 
-        # Plot?
+        # Plot Original Data Set
+        colors = ['green', 'blue']
+        plt.scatter(X[:, 0], X[:, 1], c=y, cmap=ListedColormap(colors))
+        plt.show()
 
         pipeline = Pipeline([
             ("poly_features", PolynomialFeatures(degree=3)),  # Polynomial degree is usually number of features + 1?

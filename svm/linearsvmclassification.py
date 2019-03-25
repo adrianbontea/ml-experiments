@@ -2,6 +2,8 @@ from base import ExperimentBase
 from sklearn.datasets import load_iris
 from sklearn.preprocessing import StandardScaler
 from sklearn.svm import LinearSVC
+import matplotlib.pyplot as plt
+from matplotlib.colors import ListedColormap
 
 
 class LinearSvmClassificationExperiment(ExperimentBase):
@@ -11,6 +13,12 @@ class LinearSvmClassificationExperiment(ExperimentBase):
 
         # Binary classification
         y = (iris.target == 2)  # Iris-Virginica
+
+        # Plot Original Data Set - Virginica and Non-Virginica instances
+        colors = ['green', 'blue']
+        plt.scatter(X[:, 0], X[:, 1], c=y, cmap= ListedColormap(colors))
+        plt.show()
+
         scaler = StandardScaler()
         X_tr = scaler.fit_transform(X)
 
