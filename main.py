@@ -2,6 +2,7 @@ import asyncio
 from californiahousing import *
 from classification import *
 from whitebox import *
+from svm import *
 import dependency_injector.containers as containers
 import dependency_injector.providers as providers
 
@@ -25,10 +26,11 @@ class ExperimentsContainer(containers.DeclarativeContainer):
     whitebox_linear_regression = providers.Factory(LinearRegressionExperiment)
     whitebox_polynomial_regression = providers.Factory(PolynomialRegressionExperiment)
     whitebox_logistic_regression = providers.Factory(LogisticRegressionExperiment)
+    svm_linear = providers.Factory(LinearSvmClassificationExperiment)
 
 
 class RunnersContainer(containers.DeclarativeContainer):
-    instance = providers.Factory(ExperimentRunner, experiment=ExperimentsContainer.whitebox_logistic_regression)
+    instance = providers.Factory(ExperimentRunner, experiment=ExperimentsContainer.svm_linear)
 
 
 async def main():
