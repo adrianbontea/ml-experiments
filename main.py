@@ -26,12 +26,14 @@ class ExperimentsContainer(containers.DeclarativeContainer):
     whitebox_linear_regression = providers.Factory(LinearRegressionExperiment)
     whitebox_polynomial_regression = providers.Factory(PolynomialRegressionExperiment)
     whitebox_logistic_regression = providers.Factory(LogisticRegressionExperiment)
-    svm_linear = providers.Factory(LinearSvmClassificationExperiment)
-    svm_non_linear = providers.Factory(NonLinearSvmClassificationExperiment)
+    svm_linear_classification = providers.Factory(LinearSvmClassificationExperiment)
+    svm_non_linear_classification = providers.Factory(NonLinearSvmClassificationExperiment)
+    svm_linear_regression = providers.Factory(LinearSvmRegressionExperiment)
+    svm_non_linear_regression = providers.Factory(NonLinearSvmRegressionExperiment)
 
 
 class RunnersContainer(containers.DeclarativeContainer):
-    instance = providers.Factory(ExperimentRunner, experiment=ExperimentsContainer.svm_non_linear)
+    instance = providers.Factory(ExperimentRunner, experiment=ExperimentsContainer.svm_non_linear_regression)
 
 
 async def main():
