@@ -9,6 +9,9 @@ from matplotlib.colors import ListedColormap
 from mlxtend.plotting import plot_decision_regions
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.neighbors import KNeighborsClassifier
+from sklearn.linear_model import SGDClassifier
+from sklearn.metrics import confusion_matrix
+from sklearn.model_selection import cross_val_predict
 
 
 class NonLinearSvmClassificationExperiment(ExperimentBase):
@@ -83,6 +86,12 @@ class NonLinearSvmClassificationExperiment(ExperimentBase):
         print("Random Forest prediction:", classifier.predict([X_tr[random_index, ]]))
         print("Label:", y[random_index])
 
+        predictions = cross_val_predict(classifier, X_tr, y, cv=3)
+        conf_matrix = confusion_matrix(y, predictions)
+
+        print("Confusion matrix for Random Forest Classifier")
+        print(conf_matrix)
+
         # Try K-Nearest Neighbours Classifier and decision regions
         classifier = KNeighborsClassifier()
         classifier.fit(X_tr, y)
@@ -94,3 +103,27 @@ class NonLinearSvmClassificationExperiment(ExperimentBase):
 
         print("K-Nearest Neighbours prediction:", classifier.predict([X_tr[random_index, ]]))
         print("Label:", y[random_index])
+
+        predictions = cross_val_predict(classifier, X_tr, y, cv=3)
+        conf_matrix = confusion_matrix(y, predictions)
+
+        print("Confusion matrix for K-Nearest Neighbours")
+        print(conf_matrix)
+
+        # Try SGD Classifier (binary) and decision regions
+        classifier = SGDClassifier()
+        classifier.fit(X_tr, y)
+
+        # Plot decision regions
+        plot_decision_regions(X_tr, y, classifier)
+        plt.title('SGD Classifier on Moons')
+        plt.show()
+
+        print("SGD prediction:", classifier.predict([X_tr[random_index,]]))
+        print("Label:", y[random_index])
+
+        predictions = cross_val_predict(classifier, X_tr, y, cv=3)
+        conf_matrix = confusion_matrix(y, predictions)
+
+        print("Confusion matrix for SGD Classifier")
+        print(conf_matrix)
