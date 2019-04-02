@@ -3,6 +3,7 @@ from californiahousing import *
 from classification import *
 from whitebox import *
 from svm import *
+from decisiontrees import *
 import dependency_injector.containers as containers
 import dependency_injector.providers as providers
 
@@ -30,10 +31,11 @@ class ExperimentsContainer(containers.DeclarativeContainer):
     svm_non_linear_classification = providers.Factory(NonLinearSvmClassificationExperiment)
     svm_linear_regression = providers.Factory(LinearSvmRegressionExperiment)
     svm_non_linear_regression = providers.Factory(NonLinearSvmRegressionExperiment)
+    decision_tree_visualization = providers.Factory(DecisionTreeVisualizationExperiment)
 
 
 class RunnersContainer(containers.DeclarativeContainer):
-    instance = providers.Factory(ExperimentRunner, experiment=ExperimentsContainer.svm_non_linear_regression)
+    instance = providers.Factory(ExperimentRunner, experiment=ExperimentsContainer.decision_tree_visualization)
 
 
 async def main():
