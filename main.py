@@ -32,10 +32,11 @@ class ExperimentsContainer(containers.DeclarativeContainer):
     svm_linear_regression = providers.Factory(LinearSvmRegressionExperiment)
     svm_non_linear_regression = providers.Factory(NonLinearSvmRegressionExperiment)
     decision_tree_visualization = providers.Factory(DecisionTreeVisualizationExperiment)
+    decision_tree_regularization = providers.Factory(DecisionTreeRegularizationExperiment)
 
 
 class RunnersContainer(containers.DeclarativeContainer):
-    instance = providers.Factory(ExperimentRunner, experiment=ExperimentsContainer.decision_tree_visualization)
+    instance = providers.Factory(ExperimentRunner, experiment=ExperimentsContainer.decision_tree_regularization)
 
 
 async def main():
