@@ -11,7 +11,7 @@ class DecisionTreeVisualizationExperiment(ExperimentBase):
     async def do_run_async(self):
         iris = load_iris()
         X = iris.data[:, 2:]  # petal length and width
-        y = iris.target
+        y = iris.target  # multiclass
 
         output_folder = "output/decisiontrees"
         if not os.path.isdir(output_folder):
@@ -113,3 +113,11 @@ class DecisionTreeVisualizationExperiment(ExperimentBase):
 
         # Cannot plot decision regions because of multiple feature instances
         # (multi-dimensional space for feature vectors...)
+
+        # Let's see class probabilities and a class prediction for a flower
+        print(
+            "Class probabilities for a flower with sepal length 2.5 cm, sepal width 1.25 cm, petal length 5 cm and petal width 1.5 cm:",
+            tree_clf.predict_proba([[2.5, 1.25, 5, 1.5]]))
+        print(
+            "Class for a flower with sepal length 2.5 cm, sepal width 1.25 cm, petal length 5 cm and petal width 1.5 cm:",
+            iris.target_names[tree_clf.predict([[2.5, 1.25, 5, 1.5]])[0]])

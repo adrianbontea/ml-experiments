@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="afbad002-6eb2-4efd-a8ac-75a5f9b77985" name="Default Changelist" comment="Added linear and non-linear SVM regression experiments">
-      <change afterPath="$PROJECT_DIR$/decisiontrees/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/decisiontrees/visualization.py" afterDir="false" />
+    <list default="true" id="afbad002-6eb2-4efd-a8ac-75a5f9b77985" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/decisiontrees/visualization.py" beforeDir="false" afterPath="$PROJECT_DIR$/decisiontrees/visualization.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/decisiontrees/iris_4_features_tree_depth_7.dot" beforeDir="false" afterPath="$PROJECT_DIR$/output/decisiontrees/iris_4_features_tree_depth_7.dot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/decisiontrees/iris_tree_depth_2.dot" beforeDir="false" afterPath="$PROJECT_DIR$/output/decisiontrees/iris_tree_depth_2.dot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/decisiontrees/iris_tree_depth_3.dot" beforeDir="false" afterPath="$PROJECT_DIR$/output/decisiontrees/iris_tree_depth_3.dot" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,7 +19,20 @@
     <favorites_list name="ml-experiments" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/decisiontrees/visualization.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="735">
+              <caret line="122" column="73" selection-start-line="122" selection-start-column="73" selection-end-line="122" selection-end-column="73" />
+              <folding>
+                <element signature="e#0#31#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -88,26 +102,6 @@
             <path>
               <item name="ml-experiments" type="b2602c69:ProjectViewProjectNode" />
               <item name="ml-experiments" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ml-experiments" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ml-experiments" type="462c0819:PsiDirectoryNode" />
-              <item name="base" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ml-experiments" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ml-experiments" type="462c0819:PsiDirectoryNode" />
-              <item name="californiahousing" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ml-experiments" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ml-experiments" type="462c0819:PsiDirectoryNode" />
-              <item name="decisiontrees" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ml-experiments" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ml-experiments" type="462c0819:PsiDirectoryNode" />
-              <item name="svm" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -419,7 +413,14 @@
       <option name="project" value="LOCAL" />
       <updated>1553971047745</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Added DecisionTreeVisualizationExperiment">
+      <created>1554235232155</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1554235232155</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TodoView">
@@ -433,6 +434,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Structure" order="0" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="1" side_tool="true" weight="0.32995737" />
@@ -452,7 +454,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info active="true" anchor="right" content_ui="combo" id="Project" order="3" visible="true" weight="0.33208954" />
+      <window_info active="true" anchor="right" content_ui="combo" id="Project" order="3" visible="true" weight="0.2510661" />
     </layout>
     <layout-to-restore>
       <window_info id="Structure" order="0" side_tool="true" weight="0.25" />
@@ -549,7 +551,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Minor formatting" />
     <MESSAGE value="Finished BinaryClassificationExperiment with Precision-Recall(Sensitivity) Tradeoff" />
     <MESSAGE value="Fixed a typo in BinaryClassificationExperiment" />
     <MESSAGE value="MulticlassClassificationExperiment" />
@@ -574,7 +575,8 @@
     <MESSAGE value="Added more experiments to linear and non-linear SVM classification and decision region plotting via mlxtend" />
     <MESSAGE value="Added SGD Classifier to NonLinearSvmClassificationExperiment and confusion matrix computing to compare Random Forest, SGD and K-Nearest Neighbours" />
     <MESSAGE value="Added linear and non-linear SVM regression experiments" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added linear and non-linear SVM regression experiments" />
+    <MESSAGE value="Added DecisionTreeVisualizationExperiment" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added DecisionTreeVisualizationExperiment" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/californiahousing/__init__.py">
@@ -973,8 +975,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/decisiontrees/visualization.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="9" column="41" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="41" />
+        <state relative-caret-position="735">
+          <caret line="122" column="73" selection-start-line="122" selection-start-column="73" selection-end-line="122" selection-end-column="73" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>
