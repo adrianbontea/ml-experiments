@@ -1,3 +1,3 @@
-from .EnsembleLearningExperiment import EnsembleLearningExperiment
+from .VotingClassifierExperiment import VotingClassifierExperiment
 
-__all__ = ['EnsembleLearningExperiment']
+__all__ = ['VotingClassifierExperiment']

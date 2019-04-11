@@ -6,7 +6,7 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.metrics import accuracy_score
 
 
-class EnsembleLearningExperiment(ClassificationExperimentBase):
+class VotingClassifierExperiment(ClassificationExperimentBase):
     async def do_run_async(self):
         training_set = super().load_train_images()
         training_labels = super().load_train_labels()

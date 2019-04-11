@@ -35,11 +35,11 @@ class ExperimentsContainer(containers.DeclarativeContainer):
     decision_tree_visualization = providers.Factory(DecisionTreeVisualizationExperiment)
     decision_tree_regularization = providers.Factory(DecisionTreeRegularizationExperiment)
     decision_tree_regression = providers.Factory(DecisionTreeRegressionExperiment)
-    ensemble_learning = providers.Factory(EnsembleLearningExperiment)
+    voting_classifier = providers.Factory(VotingClassifierExperiment)
 
 
 class RunnersContainer(containers.DeclarativeContainer):
-    instance = providers.Factory(ExperimentRunner, experiment=ExperimentsContainer.ensemble_learning)
+    instance = providers.Factory(ExperimentRunner, experiment=ExperimentsContainer.voting_classifier)
 
 
 async def main():
