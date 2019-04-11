@@ -4,6 +4,7 @@ from classification import *
 from whitebox import *
 from svm import *
 from decisiontrees import *
+from ensemble import *
 import dependency_injector.containers as containers
 import dependency_injector.providers as providers
 
@@ -34,10 +35,11 @@ class ExperimentsContainer(containers.DeclarativeContainer):
     decision_tree_visualization = providers.Factory(DecisionTreeVisualizationExperiment)
     decision_tree_regularization = providers.Factory(DecisionTreeRegularizationExperiment)
     decision_tree_regression = providers.Factory(DecisionTreeRegressionExperiment)
+    ensemble_learning = providers.Factory(EnsembleLearningExperiment)
 
 
 class RunnersContainer(containers.DeclarativeContainer):
-    instance = providers.Factory(ExperimentRunner, experiment=ExperimentsContainer.decision_tree_regression)
+    instance = providers.Factory(ExperimentRunner, experiment=ExperimentsContainer.ensemble_learning)
 
 
 async def main():
