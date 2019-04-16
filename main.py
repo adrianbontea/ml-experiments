@@ -36,10 +36,11 @@ class ExperimentsContainer(containers.DeclarativeContainer):
     decision_tree_regularization = providers.Factory(DecisionTreeRegularizationExperiment)
     decision_tree_regression = providers.Factory(DecisionTreeRegressionExperiment)
     voting_classifier = providers.Factory(VotingClassifierExperiment)
+    bagging_pasting = providers.Factory(BaggingAndPastingExperiment)
 
 
 class RunnersContainer(containers.DeclarativeContainer):
-    instance = providers.Factory(ExperimentRunner, experiment=ExperimentsContainer.voting_classifier)
+    instance = providers.Factory(ExperimentRunner, experiment=ExperimentsContainer.bagging_pasting)
 
 
 async def main():

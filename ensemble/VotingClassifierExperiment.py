@@ -22,7 +22,7 @@ class VotingClassifierExperiment(ClassificationExperimentBase):
         # Hard Voting (The class with the higher number of votes is output)
         sgd_clf = SGDClassifier()
         rnd_clf = RandomForestClassifier()
-        k_clf = KNeighborsClassifier()
+        k_clf = KNeighborsClassifier()  # Note: training this is very slow on the MNIST data set
 
         voting_clf = VotingClassifier(
             estimators=[('sgd', sgd_clf), ('rf', rnd_clf), ('k', k_clf)],
