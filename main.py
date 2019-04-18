@@ -37,10 +37,11 @@ class ExperimentsContainer(containers.DeclarativeContainer):
     decision_tree_regression = providers.Factory(DecisionTreeRegressionExperiment)
     voting_classifier = providers.Factory(VotingClassifierExperiment)
     bagging_pasting = providers.Factory(BaggingAndPastingExperiment)
+    random_forest = providers.Factory(RandomForestExperiment)
 
 
 class RunnersContainer(containers.DeclarativeContainer):
-    instance = providers.Factory(ExperimentRunner, experiment=ExperimentsContainer.bagging_pasting)
+    instance = providers.Factory(ExperimentRunner, experiment=ExperimentsContainer.random_forest)
 
 
 async def main():

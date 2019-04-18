@@ -1,10 +1,9 @@
-from .base import ClassificationExperimentBase
-from sklearn.linear_model import SGDClassifier
-import matplotlib
-import matplotlib.pyplot as plt
 import numpy as np
-from sklearn.model_selection import cross_val_predict
+from sklearn.linear_model import SGDClassifier
 from sklearn.metrics import confusion_matrix, precision_score, recall_score, f1_score, precision_recall_curve
+from sklearn.model_selection import cross_val_predict
+
+from .base import ClassificationExperimentBase
 
 
 class BinaryClassificationExperiment(ClassificationExperimentBase):
@@ -24,16 +23,14 @@ class BinaryClassificationExperiment(ClassificationExperimentBase):
         # Pick a five
         index_of_five = self.__get_index_of_random_true(five_binary_labels)
         some_digit = training_set_tr[index_of_five, ]
-        some_digit_image = some_digit.reshape(28, 28)
-        plt.imshow(some_digit_image, cmap=matplotlib.cm.binary, interpolation="nearest")
+        super().show_digit(some_digit)
 
         print("some_digit is a 5:", sgd_classifier.predict([some_digit]))
 
         # Pick a not five
         index_of_not_five = self.__get_index_of_random_false(five_binary_labels)
         some_digit = training_set_tr[index_of_not_five, ]
-        some_digit_image = some_digit.reshape(28, 28)
-        plt.imshow(some_digit_image, cmap=matplotlib.cm.binary, interpolation="nearest")
+        super().show_digit(some_digit)
 
         print("some_digit is a 5:", sgd_classifier.predict([some_digit]))
 

@@ -28,7 +28,7 @@ class BaggingAndPastingExperiment(ExperimentBase):
 
         bag_clf = BaggingClassifier(
             DecisionTreeClassifier(), n_estimators=100,
-            max_samples=100, bootstrap=True, n_jobs=1
+            max_samples=100, bootstrap=True, n_jobs=-1
         )
         bag_clf.fit(X, y)
 
@@ -50,7 +50,7 @@ class BaggingAndPastingExperiment(ExperimentBase):
 
         pasting_clf = BaggingClassifier(
             DecisionTreeClassifier(), n_estimators=10,
-            max_samples=100, bootstrap=False, n_jobs=1
+            max_samples=100, bootstrap=False, n_jobs=-1
         )
         pasting_clf.fit(X, y)
 

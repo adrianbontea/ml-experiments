@@ -1,6 +1,8 @@
 from mnist import *
 from base import ExperimentBase
 import numpy as np
+import matplotlib.pyplot as plt
+import matplotlib
 
 
 class ClassificationExperimentBase(ExperimentBase):
@@ -21,6 +23,12 @@ class ClassificationExperimentBase(ExperimentBase):
     def get_random_digit(self, training_set, labels, digit):
         indexes = np.where(labels == digit)[0]
         return training_set[indexes[np.random.randint(0, len(indexes) - 1)]]
+
+    def show_digit(self, digit):
+        if digit.shape != (28, 28):
+            digit = digit.reshape((28, 28))
+        plt.imshow(digit, cmap=matplotlib.cm.binary, interpolation="nearest")
+        plt.show()
 
     def __load_file(self, filename):
         gz_path = os.path.join(self.__mnist_path, filename)
