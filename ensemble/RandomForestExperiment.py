@@ -26,7 +26,8 @@ class RandomForestExperiment(ClassificationExperimentBase):
 
         print(f"Training the RandomForestClassifier took {elapsed} seconds")
 
-        a_nine = super().get_random_digit(training_set_tr, training_labels, 9)  # 784 Pixel indexes! From 0 (white) to 255 (black)
+        a_nine = super().get_random_digit(training_set_tr, training_labels, 9)  
+        # 784 Pixel intensities from 0 to 255! (Grayscale 8-bit image)
         super().show_digit(a_nine)
 
         print(f"RandomForest Prediction: {rnd_clf.predict([a_nine])}")
