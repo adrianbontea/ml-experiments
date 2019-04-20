@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="afbad002-6eb2-4efd-a8ac-75a5f9b77985" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ensemble/RandomForestExperiment.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ensemble/AdaBoostingExperiment.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classification/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/classification/base.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classification/binary.py" beforeDir="false" afterPath="$PROJECT_DIR$/classification/binary.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ensemble/BaggingAndPastingExperiment.py" beforeDir="false" afterPath="$PROJECT_DIR$/ensemble/BaggingAndPastingExperiment.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ensemble/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/ensemble/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
@@ -21,26 +18,14 @@
     <favorites_list name="ml-experiments" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/californiahousing/dataanalysis.py">
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ensemble/AdaBoostingExperiment.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="54" column="78" lean-forward="true" selection-start-line="54" selection-start-column="78" selection-end-line="54" selection-end-column="91" />
+            <state relative-caret-position="120">
+              <caret line="5" selection-start-line="5" selection-end-line="5" />
               <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/classification/base.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="419">
-              <caret line="30" column="18" lean-forward="true" selection-start-line="30" selection-start-column="18" selection-end-line="30" selection-end-column="18" />
-              <folding>
-                <element signature="e#0#19#0" expanded="true" />
+                <element signature="e#0#47#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -49,22 +34,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="565">
-              <caret line="43" column="96" selection-start-line="43" selection-start-column="96" selection-end-line="43" selection-end-column="96" />
+            <state relative-caret-position="94">
+              <caret line="44" column="95" selection-start-line="44" selection-start-column="95" selection-end-line="44" selection-end-column="95" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ensemble/RandomForestExperiment.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="645">
-              <caret line="28" column="82" selection-start-line="28" selection-start-column="82" selection-end-line="28" selection-end-column="82" />
-              <folding>
-                <element signature="e#0#55#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -121,11 +94,12 @@
         <option value="$PROJECT_DIR$/ensemble/EnsembleLearningExperiment.py" />
         <option value="$PROJECT_DIR$/ensemble/VotingClassifierExperiment.py" />
         <option value="$PROJECT_DIR$/ensemble/BaggingAndPastingExperiment.py" />
-        <option value="$PROJECT_DIR$/ensemble/__init__.py" />
-        <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/classification/binary.py" />
         <option value="$PROJECT_DIR$/classification/base.py" />
         <option value="$PROJECT_DIR$/ensemble/RandomForestExperiment.py" />
+        <option value="$PROJECT_DIR$/ensemble/__init__.py" />
+        <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/ensemble/AdaBoostingExperiment.py" />
       </list>
     </option>
   </component>
@@ -150,27 +124,7 @@
             <path>
               <item name="ml-experiments" type="b2602c69:ProjectViewProjectNode" />
               <item name="ml-experiments" type="462c0819:PsiDirectoryNode" />
-              <item name="californiahousing" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ml-experiments" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ml-experiments" type="462c0819:PsiDirectoryNode" />
-              <item name="classification" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ml-experiments" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ml-experiments" type="462c0819:PsiDirectoryNode" />
-              <item name="decisiontrees" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ml-experiments" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ml-experiments" type="462c0819:PsiDirectoryNode" />
               <item name="ensemble" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ml-experiments" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ml-experiments" type="462c0819:PsiDirectoryNode" />
-              <item name="svm" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -180,6 +134,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
@@ -532,7 +487,14 @@
       <option name="project" value="LOCAL" />
       <updated>1555441450168</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="Added RandomForestExperiment">
+      <created>1555613256160</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1555613256160</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TodoView">
@@ -566,7 +528,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Project" order="3" visible="true" weight="0.26439232" />
+      <window_info anchor="right" content_ui="combo" id="Project" order="3" visible="true" weight="0.2750533" />
     </layout>
     <layout-to-restore>
       <window_info id="Structure" order="0" side_tool="true" weight="0.25" />
@@ -663,7 +625,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added training set fit based on Batch Gradient Descent to the LinearRegressionExperiment" />
     <MESSAGE value="Added fitting based on Stochastic Grading Descent to the white-box LinearRegressionExperiment" />
     <MESSAGE value="Added fitting based on Mini-Batch Grading Descent to the white-box LinearRegressionExperiment" />
     <MESSAGE value="Added PolynomialRegressionExperiment" />
@@ -688,7 +649,8 @@
     <MESSAGE value="Added EnsembleLearningExperiment" />
     <MESSAGE value="Renamed EnsembleLearningExperiment to VotingClassifierExperiment" />
     <MESSAGE value="Added BaggingAndPastingExperiment" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added BaggingAndPastingExperiment" />
+    <MESSAGE value="Added RandomForestExperiment" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added RandomForestExperiment" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
@@ -740,13 +702,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/sklearn/linear_model/tests/test_sgd.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="43" column="8" selection-start-line="43" selection-start-column="8" selection-end-line="43" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/3/unittest/__init__.pyi">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1068,16 +1023,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ensemble/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="4" column="95" selection-start-line="4" selection-start-column="95" selection-end-line="4" selection-end-column="95" />
-          <folding>
-            <element signature="e#0#66#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/classification/binary.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1008">
@@ -1124,26 +1069,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="565">
-          <caret line="43" column="96" selection-start-line="43" selection-start-column="96" selection-end-line="43" selection-end-column="96" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/classification/base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="419">
-          <caret line="30" column="18" lean-forward="true" selection-start-line="30" selection-start-column="18" selection-end-line="30" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/Program Files (x86)/Python37-32/Lib/asyncio/events.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -1151,12 +1076,52 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/classification/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="581">
+          <caret line="30" column="18" selection-start-line="30" selection-start-column="18" selection-end-line="30" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ensemble/RandomForestExperiment.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="28" column="82" selection-start-line="28" selection-start-column="82" selection-end-line="28" selection-end-column="82" />
+        <state relative-caret-position="425">
+          <caret line="29" column="8" lean-forward="true" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="70" />
           <folding>
             <element signature="e#0#55#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ensemble/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="5" column="119" selection-start-line="5" selection-start-column="119" selection-end-line="5" selection-end-column="119" />
+          <folding>
+            <element signature="e#0#66#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="94">
+          <caret line="44" column="95" selection-start-line="44" selection-start-column="95" selection-end-line="44" selection-end-column="95" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ensemble/AdaBoostingExperiment.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+          <folding>
+            <element signature="e#0#47#0" expanded="true" />
           </folding>
         </state>
       </provider>

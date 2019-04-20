@@ -38,10 +38,11 @@ class ExperimentsContainer(containers.DeclarativeContainer):
     voting_classifier = providers.Factory(VotingClassifierExperiment)
     bagging_pasting = providers.Factory(BaggingAndPastingExperiment)
     random_forest = providers.Factory(RandomForestExperiment)
+    ada_boosting = providers.Factory(AdaBoostingExperiment)
 
 
 class RunnersContainer(containers.DeclarativeContainer):
-    instance = providers.Factory(ExperimentRunner, experiment=ExperimentsContainer.random_forest)
+    instance = providers.Factory(ExperimentRunner, experiment=ExperimentsContainer.ada_boosting)
 
 
 async def main():
