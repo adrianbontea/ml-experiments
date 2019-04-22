@@ -39,10 +39,11 @@ class ExperimentsContainer(containers.DeclarativeContainer):
     bagging_pasting = providers.Factory(BaggingAndPastingExperiment)
     random_forest = providers.Factory(RandomForestExperiment)
     ada_boosting = providers.Factory(AdaBoostingExperiment)
+    stacking = providers.Factory(StackingExperiment)
 
 
 class RunnersContainer(containers.DeclarativeContainer):
-    instance = providers.Factory(ExperimentRunner, experiment=ExperimentsContainer.ada_boosting)
+    instance = providers.Factory(ExperimentRunner, experiment=ExperimentsContainer.stacking)
 
 
 async def main():
