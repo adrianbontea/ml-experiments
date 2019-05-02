@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="afbad002-6eb2-4efd-a8ac-75a5f9b77985" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ensemble/StackingExperiment.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ensemble/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/ensemble/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,31 +18,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ensemble/StackingExperiment.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="619">
-              <caret line="40" column="88" selection-start-line="40" selection-start-column="88" selection-end-line="40" selection-end-column="88" />
-              <folding>
-                <element signature="e#0#55#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ensemble/__init__.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="41" selection-start-line="4" selection-start-column="41" selection-end-line="4" selection-end-column="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="825">
-              <caret line="45" column="91" selection-start-line="45" selection-start-column="91" selection-end-line="45" selection-end-column="91" />
+            <state relative-caret-position="587">
+              <caret line="54" column="99" selection-start-line="54" selection-start-column="99" selection-end-line="54" selection-end-column="99" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -108,8 +85,8 @@
         <option value="$PROJECT_DIR$/ensemble/RandomForestExperiment.py" />
         <option value="$PROJECT_DIR$/ensemble/AdaBoostingExperiment.py" />
         <option value="$PROJECT_DIR$/ensemble/__init__.py" />
-        <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/ensemble/StackingExperiment.py" />
+        <option value="$PROJECT_DIR$/main.py" />
       </list>
     </option>
   </component>
@@ -124,7 +101,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -132,15 +108,11 @@
               <item name="ml-experiments" type="b2602c69:ProjectViewProjectNode" />
               <item name="ml-experiments" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="ml-experiments" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ml-experiments" type="462c0819:PsiDirectoryNode" />
-              <item name="ensemble" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -511,7 +483,14 @@
       <option name="project" value="LOCAL" />
       <updated>1555774874098</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="Added StackingExperiment">
+      <created>1555961558471</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1555961558471</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TodoView">
@@ -545,7 +524,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Project" order="3" visible="true" weight="0.28144988" />
+      <window_info anchor="right" content_ui="combo" id="Project" order="3" visible="true" weight="0.28464818" />
     </layout>
     <layout-to-restore>
       <window_info id="Structure" order="0" side_tool="true" weight="0.25" />
@@ -642,7 +621,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added fitting based on Mini-Batch Grading Descent to the white-box LinearRegressionExperiment" />
     <MESSAGE value="Added PolynomialRegressionExperiment" />
     <MESSAGE value="Added export list to all packages (facade for simpler imports)" />
     <MESSAGE value="Added LogisticRegressionExperiment" />
@@ -667,7 +645,8 @@
     <MESSAGE value="Added BaggingAndPastingExperiment" />
     <MESSAGE value="Added RandomForestExperiment" />
     <MESSAGE value="Added AdaBoostingExperiment" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added AdaBoostingExperiment" />
+    <MESSAGE value="Added StackingExperiment" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added StackingExperiment" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
@@ -1120,16 +1099,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="825">
-          <caret line="45" column="91" selection-start-line="45" selection-start-column="91" selection-end-line="45" selection-end-column="91" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/Program Files (x86)/Python37-32/Lib/asyncio/events.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -1139,10 +1108,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ensemble/StackingExperiment.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="619">
-          <caret line="40" column="88" selection-start-line="40" selection-start-column="88" selection-end-line="40" selection-end-column="88" />
+        <state relative-caret-position="85">
+          <caret line="5" column="24" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="24" />
           <folding>
             <element signature="e#0#55#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="587">
+          <caret line="54" column="99" selection-start-line="54" selection-start-column="99" selection-end-line="54" selection-end-column="99" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
           </folding>
         </state>
       </provider>
