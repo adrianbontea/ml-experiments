@@ -34,5 +34,5 @@ class PolynomialRegressionExperiment(ExperimentBase):
 
         # Let's try a prediction
         random_index = np.random.randint(0, m)
-        print("Value predicted using LinearRegression: ", reg.predict(np.array([X_tr[random_index, ]])))
-        print("Label:", y[random_index, ])
+        print(f"Value predicted using LinearRegression: {reg.predict([X_tr[random_index, ]])}")
+        print(f"Label:{y[random_index, ]}")

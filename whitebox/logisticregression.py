@@ -32,8 +32,8 @@ class LogisticRegressionExperiment(ExperimentBase):
 
         # X_new = np.array(X_new)
         # X_new = X_new.reshape((20, 1))
-        print("Trained with a single feature. Logistic Regression Predicted Probabilities:", log_reg.predict_proba(X_new))
-        print("Trained with a single feature. Logistic Regression Predicted Binary Labels:", log_reg.predict(X_new))
+        print(f"Trained with a single feature. Logistic Regression Predicted Probabilities:{log_reg.predict_proba(X_new)}")
+        print(f"Trained with a single feature. Logistic Regression Predicted Binary Labels:{log_reg.predict(X_new)}")
 
         # Train with all the features (sepal length, sepal width, petal length, petal width)
         X = iris.data
@@ -42,7 +42,7 @@ class LogisticRegressionExperiment(ExperimentBase):
 
         X_new = np.random.uniform(0, 5, (20, 4))
 
-        print("Trained with all features. Logistic Regression Predicted Binary Labels:", log_reg.predict(X_new))
+        print(f"Trained with all features. Logistic Regression Predicted Binary Labels:{log_reg.predict(X_new)}")
 
         # Softmax Regression (Multinomial Logistic Regression) (Generalize Logistic Regression to multiclass classification)
         X = iris.data
@@ -51,7 +51,7 @@ class LogisticRegressionExperiment(ExperimentBase):
         softmax_reg = LogisticRegression(multi_class="multinomial", solver="lbfgs", C=100)
         softmax_reg.fit(X, y)
 
-        print("Softmax prediction for a flower with sepal and petal length = 5 and width = 2:", iris.target_names[softmax_reg.predict([[5, 2, 5, 2]])[0]])
+        print(f"Softmax prediction for a flower with sepal and petal length = 5 and width = 2:{iris.target_names[softmax_reg.predict([[5, 2, 5, 2]])[0]]}")
         # Test change
 
 

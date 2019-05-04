@@ -25,12 +25,12 @@ class MulticlassClassificationExperiment(ClassificationExperimentBase):
         sgd_classifier.fit(training_set_tr, training_labels)
 
         seven = super().get_random_digit(training_set_tr, training_labels, 7)
-        print("The digit is:", sgd_classifier.predict([seven]))
+        print(f"The digit is:{sgd_classifier.predict([seven])}")
 
         # Get the classifier to return the decision scores for each class rather than a prediction
         # The class with the higher score is used for prediction
         scores = sgd_classifier.decision_function([seven])
-        print("The decision scores for the digit are:", scores)
+        print(f"The decision scores for the digit are:{scores}")
 
         # Can also force Scikit-Learn to use the SGDClassifier with OvO strategy
         ovo = OneVsOneClassifier(sgd_classifier)
@@ -41,8 +41,8 @@ class MulticlassClassificationExperiment(ClassificationExperimentBase):
         # and is a multiclass algorithm so no need for OvA or OvO strategies
         rnd_forest = RandomForestClassifier()
         rnd_forest.fit(training_set_tr, training_labels)
-        print("Random Forest: The digit is:", rnd_forest.predict([seven]))
-        print("Random Forest: Probabilities:", rnd_forest.predict_proba([seven]))
+        print(f"Random Forest: The digit is:{rnd_forest.predict([seven])}")
+        print(f"Random Forest: Probabilities:{rnd_forest.predict_proba([seven])}")
 
         # Evaluate SGD Classifier vs Random Forest based on confusion matrix
         sgd_predictions = cross_val_predict(sgd_classifier, training_set_tr, training_labels, cv=3)

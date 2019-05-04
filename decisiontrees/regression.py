@@ -32,6 +32,6 @@ class DecisionTreeRegressionExperiment(ExperimentBase):
 
         rand_index = np.random.randint(0, 99)
         x = X[rand_index, ]
-        print("Prediction for:", x)
+        print(f"Prediction for:{x}")
         print(tree_reg.predict([x]))
-        print("Label:", y[rand_index, ])
+        print(f"Label:{y[rand_index, ]}")

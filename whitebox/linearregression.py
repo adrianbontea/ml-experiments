@@ -9,9 +9,9 @@ class LinearRegressionExperiment(ExperimentBase):
         # Generate some linear-looking data to test the normal equation
         # Note: X is a ndarray of shape (100,1) simulating a training set of 100 instances with one feature each
         # y is a ndarray of shape (100,1) simulating the labels for the 100 training instances
-        # y is a linear-ish model introducing some noise (+ np.random.randn(100, 1)) to the linear equation (y = ax + b)
-        X = 2 * np.random.rand(100, 1)
-        y = 4 + 3 * X + np.random.randn(100, 1)
+        # y is a linear-ish model introducing some noise (+ np.random.uniform(1, 5, (100, 1)) to the linear equation (y = ax + b)
+        X = 2 * np.random.uniform(1, 5, (100, 1))
+        y = 4 + 3 * X + np.random.uniform(1, 5, (100, 1))
 
         plt.plot(X, y, ".")
         plt.show()
@@ -30,21 +30,21 @@ class LinearRegressionExperiment(ExperimentBase):
 
         # Note the result is a ndarray of shape (2,1) corresponding to a single feature for the instances:
         # theta0 (bias term) and theta1 (feature weight)
-        print("Parameters vector as determined by the normal equation:", theta_best)
-        # Note the result is close to 4 and 3 in the original equation (y = 4 + 3 * X + np.random.randn(100, 1))
-        # but not exactly 4 and 3 because of the extra noise (+ np.random.randn(100, 1))
+        print(f"Parameters vector as determined by the normal equation:{theta_best}")
+        # Note the result is close to 4 and 3 in the original equation (y = 4 + 3 * X + np.random.uniform(1, 5, (100, 1)))
+        # but not exactly 4 and 3 because of the extra noise (+ np.random.uniform(1, 5, (100, 1)))
 
         # Use the parameters computed via normal equation to make predictions
-        X_new = np.array([[0], [2]])
+        X_new = np.array([[1], [3]])
         X_new_b = np.append(np.ones((2, 1)), X_new, axis=1)
         y_predict = X_new_b.dot(theta_best)
 
-        print("Predictions based on parameters computed via normal equation:", y_predict)
+        print(f"Predictions based on parameters computed via normal equation:{y_predict}")
 
         # Compute the same using Scikit-Learn and compare - the predictions should be identical!
         lin_reg = LinearRegression()
         lin_reg.fit(X, y)
-        print("Predictions done by Scikit-Learn:", lin_reg.predict(X_new))
+        print(f"Predictions done by Scikit-Learn:{lin_reg.predict(X_new)}")
 
         # Note: The Normal Equation gets very slow when the number of features grows large!
         # On the positive side, this equation is linear with regards to the number of instances in
@@ -64,7 +64,7 @@ class LinearRegressionExperiment(ExperimentBase):
         # to the function curve in a certain point. Hence these partial derivatives are about determining
         # the slope of the cost function with regards to each axis
         # represented by each model parameter, trying to reach a global minimum for the cost function.
-        # For a certain parameter theta j, the derivative (gradient) will be: 2/m * Sum i=1 -> m(Theta T * xi - yi)*xi,j (feature j from instance i)
+        # For a certain parameter theta j, the partial derivative (gradient) will be: 2/m * Sum i=1 -> m(Theta T * xi - yi)*xi,j (feature j from instance i)
         # A vector of all these gradients for the whole training set: 2/m * X T *(X * Theta - y)
 
         # This is why the algorithm is called Batch Gradient Descent: it uses the whole batch of training
@@ -83,7 +83,7 @@ class LinearRegressionExperiment(ExperimentBase):
             gradients = 2 / m * X_b.T.dot(X_b.dot(theta) - y)
             theta = theta - eta * gradients
 
-        print("Parameters vector as determined by Batch Gradient Descent:", theta)
+        print(f"Parameters vector as determined by Batch Gradient Descent:{theta}")
         # These should be precisely the values determined by the normal equation!
         # Note: if theta best is found before number of steps is hit (1000 in this case)
         # theta next should be equal to theta since the gradients vector will be all 0!
@@ -119,7 +119,7 @@ class LinearRegressionExperiment(ExperimentBase):
                 eta = learning_schedule(epoch * m + i)  # This will gradually reduce eta on each epoch as i increases and globally as epoch increases
                 theta = theta - eta * gradients
 
-        print("Parameters vector as determined by Stochastic Gradient Descent:", theta)
+        print(f"Parameters vector as determined by Stochastic Gradient Descent:{theta}")
 
         # Min-Batch Gradient Descent is a common ground between Batch and Stochastic Gradient Decent algorithms
         # At each training step will compute the gradients based on a mini batch from the training set
@@ -137,7 +137,7 @@ class LinearRegressionExperiment(ExperimentBase):
             gradients = 2 / mini_batch_size * mini_batch_x.T.dot(mini_batch_x.dot(theta) - mini_batch_y)
             theta = theta - eta * gradients
 
-        print("Parameters vector as determined by Mini-Batch Gradient Descent:", theta)
+        print(f"Parameters vector as determined by Mini-Batch Gradient Descent:{theta}")
 
 
 

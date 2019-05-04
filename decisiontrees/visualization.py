@@ -41,7 +41,7 @@ class DecisionTreeVisualizationExperiment(ExperimentBase):
         # Versicolor, and 45 Iris-Virginica. Finally, a node’s gini attribute measures its impurity:
         # a node is “pure” (gini=0) if all training instances it applies to belong to the same
         # class.
-        # Impurity formula for node i: Gi = 1 - Sum k = 1 -> n (Pi,k)**2
+        # Impurity formula for node i: Gi = 1 - Sum [k = 1 -> n] (Pi,k)**2
         # n = number of classes
         # Pi,k is the ratio of class k instances among the training instances to which node i applies
         # e.g. For node at depth 2 left P3,1 = 49/54

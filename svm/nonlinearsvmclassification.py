@@ -37,8 +37,16 @@ class NonLinearSvmClassificationExperiment(ExperimentBase):
         classifier.fit(X_tr, y)
 
         random_index = np.random.randint(0, 100)
-        print("Non-linear SVM prediction:", classifier.predict([X_tr[random_index, ]]))
+        print(f"Non-linear SVM prediction:{classifier.predict([X_tr[random_index, ]])}")
         print("Label:", y[random_index])
+
+        predictions = cross_val_predict(classifier, X_tr, y, cv=3)
+        conf_matrix = confusion_matrix(y, predictions)
+
+        print("Confusion matrix for Linear SVC Classifier with polynomial features:")
+        print(conf_matrix)
+
+        # Great result! Full 50 on the main diagonal => no false positives and no false negatives!
 
         # Adding polynomial features is simple to implement and can work great with all sorts
         # of Machine Learning algorithms (not just SVMs), but at a low polynomial degree it
@@ -83,8 +91,8 @@ class NonLinearSvmClassificationExperiment(ExperimentBase):
         plt.title('Random Forest Classifier on Moons')
         plt.show()
 
-        print("Random Forest prediction:", classifier.predict([X_tr[random_index, ]]))
-        print("Label:", y[random_index])
+        print(f"Random Forest prediction:{classifier.predict([X_tr[random_index, ]])}")
+        print(f"Label:{y[random_index]}")
 
         predictions = cross_val_predict(classifier, X_tr, y, cv=3)
         conf_matrix = confusion_matrix(y, predictions)
@@ -101,14 +109,18 @@ class NonLinearSvmClassificationExperiment(ExperimentBase):
         plt.title('K-Nearest Neighbours Classifier on Moons')
         plt.show()
 
-        print("K-Nearest Neighbours prediction:", classifier.predict([X_tr[random_index, ]]))
-        print("Label:", y[random_index])
+        print(f"K-Nearest Neighbours prediction:{classifier.predict([X_tr[random_index, ]])}")
+        print(f"Label:{y[random_index]}")
 
         predictions = cross_val_predict(classifier, X_tr, y, cv=3)
         conf_matrix = confusion_matrix(y, predictions)
 
         print("Confusion matrix for K-Nearest Neighbours")
         print(conf_matrix)
+
+        # Great result! Full 50 on the main diagonal => no false positives and no false negatives!
+        # Actually, from all experiments, K-Nearest Neighbours seems like the best classification algorithm but also the slowest during training...
+        # Here, not only the confusion matrix is perfect but also the decision regions show the model is nicely fitting the training set (not under/over fitting)
 
         # Try SGD Classifier (binary) and decision regions
         classifier = SGDClassifier()
@@ -119,8 +131,8 @@ class NonLinearSvmClassificationExperiment(ExperimentBase):
         plt.title('SGD Classifier on Moons')
         plt.show()
 
-        print("SGD prediction:", classifier.predict([X_tr[random_index,]]))
-        print("Label:", y[random_index])
+        print(f"SGD prediction:{classifier.predict([X_tr[random_index, ]])}")
+        print(f"Label:{y[random_index]}")
 
         predictions = cross_val_predict(classifier, X_tr, y, cv=3)
         conf_matrix = confusion_matrix(y, predictions)

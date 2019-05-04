@@ -19,7 +19,7 @@ class MultilabelClassificationExperiment(ClassificationExperimentBase):
         # Labels for even digits
         even_digits = (training_labels % 2 == 0)
 
-        # Double labels (pairs)
+        # Double labels (pairs) - shape (60000, 2)
         double_labels = np.append(large_digits.reshape((60000, 1)), even_digits.reshape((60000, 1)), axis=1)
 
         classifier = KNeighborsClassifier()
@@ -28,8 +28,8 @@ class MultilabelClassificationExperiment(ClassificationExperimentBase):
         eight = super().get_random_digit(training_set_tr, training_labels, 8)
         nine = super().get_random_digit(training_set_tr, training_labels, 9)
 
-        print("K-Neighbors prediction for 8 is:", classifier.predict([eight]))
-        print("K-Neighbors prediction for 9 is:", classifier.predict([nine]))
+        print(f"K-Neighbors prediction for 8 is:{classifier.predict([eight])}")
+        print(f"K-Neighbors prediction for 9 is:{classifier.predict([nine])}")
 
         # Try with 9 classes and 9 binary labels (one for each digit)
         zeros = (training_labels == 0)
@@ -53,17 +53,19 @@ class MultilabelClassificationExperiment(ClassificationExperimentBase):
         multi_labels = np.append(multi_labels, eights.reshape((60000, 1)), axis=1)
         multi_labels = np.append(multi_labels, nines.reshape((60000, 1)), axis=1)
 
+        # multi_labels shape (60000,9)
+
         k_neigh_classifier = KNeighborsClassifier()
         k_neigh_classifier.fit(training_set_tr, multi_labels)
 
         six = super().get_random_digit(training_set_tr, training_labels, 6)
         five = super().get_random_digit(training_set_tr, training_labels, 5)
 
-        print("K-Neighbors prediction for 6 is:", k_neigh_classifier.predict([six]))
-        print("K-Neighbors prediction for 5 is:", k_neigh_classifier.predict([five]))
+        print(f"K-Neighbors prediction for 6 is:{k_neigh_classifier.predict([six])}")
+        print(f"K-Neighbors prediction for 5 is:{k_neigh_classifier.predict([five])}")
 
         rnd_forest_classifier = RandomForestClassifier()
         rnd_forest_classifier.fit(training_set_tr, multi_labels)
 
-        print("Random Forest prediction for 6 is:", rnd_forest_classifier.predict([six]))
-        print("Random Forest prediction for 5 is:", rnd_forest_classifier.predict([five]))
+        print(f"Random Forest prediction for 6 is:{rnd_forest_classifier.predict([six])}")
+        print(f"Random Forest prediction for 5 is:{rnd_forest_classifier.predict([five])}")

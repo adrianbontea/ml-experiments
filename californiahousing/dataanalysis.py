@@ -43,8 +43,8 @@ class DataAnalysisExperiment(HousingExperimentBase):
         print(subset)
 
         train_set, test_set = super().get_train_test(data, 0.2)
-        print("Train set size is " + str(len(train_set)))
-        print("Test set size is " + str(len(test_set)))
+        print(f"Train set size is {len(train_set)}")
+        print(f"Test set size is {len(test_set)}")
 
         train_set_copy = train_set.copy()
 

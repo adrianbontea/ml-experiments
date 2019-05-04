@@ -30,8 +30,8 @@ class ModelsExperiment(HousingExperimentBase):
         some_data = predictors_tr[:5]
         some_labels = labels[:5]
 
-        print("Linear Regression Predictions:", lin_reg.predict(some_data))
-        print("Labels:", list(some_labels))
+        print(f"Linear Regression Predictions: {lin_reg.predict(some_data)}")
+        print(f"Labels:{list(some_labels)}")
 
         # Measure the error using RMSE function
         predictions = lin_reg.predict(predictors_tr)
@@ -79,6 +79,10 @@ class ModelsExperiment(HousingExperimentBase):
         print("Labels:", list(test_labels))
 
         # Perform K-fold cross-validation of Decision Tree model to measure the RMSE
+        # The algorithm splits the training set in K parts and does K training + prediction iterations
+        # each time picking one random part for evaluation and training on the other K-1. The result is K scores.
+        # The main benefit of the approach is clean predictions: on each iteration the predictor gets to predict on a subset of instances
+        # that it never saw during training.
         scores = cross_val_score(tree_reg, predictors_tr, labels, scoring="neg_mean_squared_error", cv=10)
         rmse_scores = np.sqrt(-scores)
 
@@ -122,6 +126,8 @@ class ModelsExperiment(HousingExperimentBase):
         # single 1 and rest 0 to denote a certain class)
         ocean_proximity_1_hot = binarizer.fit_transform(data.ocean_proximity)
         # Transform the numeric predictors using a pipeline composed of an inputer and scaler
+        # MinMaxScaler instantiated with default values will scale each feature between 0 and 1
+        # Scale can be controlled using the feature_range parameter (tuple)
         pipeline = Pipeline([('imputer', SimpleImputer(strategy="median")), ('scaler', MinMaxScaler())])
         predictors_tr = pipeline.fit_transform(predictors_num)
 

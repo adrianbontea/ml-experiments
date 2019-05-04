@@ -59,6 +59,9 @@ class PreProcessingExperiment(HousingExperimentBase):
         predictors_tr = pd.DataFrame(predictors_tr, columns=predictors_num.columns)
 
         # ocean proximity one hot vector is now a 2 dimensional ndarray of shape (16512,5) - convert it to list in
-        # order to be able to save it as a data frame column
-        predictors_tr["ocean_proximity"] = ocean_proximity_1_hot.tolist()
+        # order to be able to save it as a data frame column.
+        # The result is a python list of lists (a list containing 16512 lists each containing 5 binary values).
+        # The final data frame will contain a list of 5 binary values in the ocean_proximity column for each row
+        ocean_proximity = ocean_proximity_1_hot.tolist()
+        predictors_tr["ocean_proximity"] = ocean_proximity
         print(predictors_tr.head())

@@ -37,7 +37,7 @@ class BinaryClassificationExperiment(ClassificationExperimentBase):
         # Evaluate the current SGD classifier
         y_train_pred = cross_val_predict(sgd_classifier, training_set_tr, five_binary_labels, cv=3)
         cm = confusion_matrix(five_binary_labels, y_train_pred)
-        print("Confusion Matrix for random_state = 77:", cm)
+        print(f"Confusion Matrix for random_state = 77:{cm}")
 
         # For random_state = 77 we get
         # [[54168   411]
@@ -47,13 +47,13 @@ class BinaryClassificationExperiment(ClassificationExperimentBase):
         # That is 54168 true negatives, 411 false positives, 1762 false negatives and 3659 true positives
 
         # Precision (TP/(TP+FP)
-        print("Precision for random_state = 77:", precision_score(five_binary_labels, y_train_pred))
+        print(f"Precision for random_state = 77:{precision_score(five_binary_labels, y_train_pred)}")
 
         # Recall (Sensitivity) (TP/(TP+FN)
-        print("Sensitivity for random_state = 77:", recall_score(five_binary_labels, y_train_pred))
+        print(f"Sensitivity for random_state = 77:{recall_score(five_binary_labels, y_train_pred)}")
 
         # f1 mean (harmonic mean between Precision and Sensitivity)
-        print("f1 mean for random_state = 77:", f1_score(five_binary_labels, y_train_pred))
+        print(f"f1 mean for random_state = 77:{f1_score(five_binary_labels, y_train_pred)}")
 
         # Precision and Sensitivity are 1 for an IDEAL classifier
         # That is when both FP and FN are 0 (in other words no mistakes)
@@ -64,15 +64,19 @@ class BinaryClassificationExperiment(ClassificationExperimentBase):
         y_train_pred = cross_val_predict(sgd_classifier, training_set_tr, five_binary_labels, cv=3)
         cm = confusion_matrix(five_binary_labels, y_train_pred)
 
-        print("Confusion Matrix for random_state = 42:", cm)
-        print("Precision for random_state = 42:", precision_score(five_binary_labels, y_train_pred))
-        print("Sensitivity for random_state = 42:", recall_score(five_binary_labels, y_train_pred))
-        print("f1 mean for random_state = 42:", f1_score(five_binary_labels, y_train_pred))
+        print(f"Confusion Matrix for random_state = 42:{cm}")
+        print(f"Precision for random_state = 42:{precision_score(five_binary_labels, y_train_pred)}")
+        print(f"Sensitivity for random_state = 42:{recall_score(five_binary_labels, y_train_pred)}")
+        print(f"f1 mean for random_state = 42:{f1_score(five_binary_labels, y_train_pred)}")
 
         # We get lower precision (more false positives) but higher sensitivity (less false negatives)
-        # Precision-Recall Tradeoff...
+        # Precision-Recall Trade off:
         # Increasing the threshold increases precision and decreases recall
         # Conversely, decreasing threshold increases recall and decreases precision
+
+        # The random_state parameter of the classifier corresponds to the threshold
+        # A binary classifier (such as this SGDClassifier) implements a decision function that outputs a score.
+        # If the score is greater than the threshold, the output of a simple prediction will be the positive class otherwise negative
 
         sgd_classifier = SGDClassifier(random_state=77)
         sgd_classifier.fit(training_set_tr, five_binary_labels)
@@ -101,15 +105,15 @@ class BinaryClassificationExperiment(ClassificationExperimentBase):
         # so we select all but last element
 
         thresholds_for_precision_and_recall = self.__get_thresholds_for(precisions[:-1], recalls[:-1], thresholds, 0.88, 0.70)
-        print("Thresholds for Precision at least 0.88 and Recall at least 0.7 are:", thresholds_for_precision_and_recall)
+        print(f"Thresholds for Precision at least 0.88 and Recall at least 0.7 are:{thresholds_for_precision_and_recall}")
 
         # We get 33 possible threshold values for which the precision would be at least 88% and recall at least 70%
         # Test one of them
         test_threshold = thresholds_for_precision_and_recall[np.random.randint(0, len(thresholds_for_precision_and_recall) - 1)]
         predictions = scores > test_threshold
 
-        print("Precision:", precision_score(five_binary_labels, predictions))
-        print("Sensitivity", recall_score(five_binary_labels, predictions))
+        print(f"Precision:{precision_score(five_binary_labels, predictions)}")
+        print(f"Sensitivity: {recall_score(five_binary_labels, predictions)}")
 
 
     def __get_index_of_random_true(self, binary_labels):

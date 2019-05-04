@@ -36,7 +36,7 @@ class LinearSvmClassificationExperiment(ExperimentBase):
         plt.title('SVM on Iris - 2 Features - Binary Classes')
         plt.show()
 
-        print("A flower with petal length = 5.5 and petal width = 1.7 is Iris-Virginica?", svm_classifier.predict([[5.5, 1.7]]))
+        print(f"A flower with petal length = 5.5 and petal width = 1.7 is Iris-Virginica? {svm_classifier.predict([[5.5, 1.7]])}")
 
         # Multiclass classification?
         y = iris.target
@@ -57,7 +57,7 @@ class LinearSvmClassificationExperiment(ExperimentBase):
         plt.title('SVM on Iris - 2 Features - Multi Classes')
         plt.show()
 
-        print("A flower with petal length = 5.5 and petal width = 1.7 is:", iris.target_names[svm_classifier.predict([[5.5, 1.7]])[0]])
+        print(f"A flower with petal length = 5.5 and petal width = 1.7 is:{iris.target_names[svm_classifier.predict([[5.5, 1.7]])[0]]}")
 
         # Training with all 4 features
         X = iris.data  # Sepal Length, Sepal Width, Petal length, Petal Width - Shape (150,4)
@@ -68,6 +68,6 @@ class LinearSvmClassificationExperiment(ExperimentBase):
 
         svm_classifier = LinearSVC(C=1, loss="hinge")
         svm_classifier.fit(X_tr, y)
-        print("A flower with sepal length = 1.3, sepal width = 2.2, petal length = 5.5 and petal width = 1.7 is Iris-Virginica?", svm_classifier.predict([[1.3, 2.2, 5.5, 1.7]]))
+        print(f"A flower with sepal length = 1.3, sepal width = 2.2, petal length = 5.5 and petal width = 1.7 is Iris-Virginica?{svm_classifier.predict([[1.3, 2.2, 5.5, 1.7]])}")
 
         # Plot decision regions for binary labels when multiple features?

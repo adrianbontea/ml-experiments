@@ -25,14 +25,14 @@ class MultioutputClassificationExperiment(ClassificationExperimentBase):
         three = super().get_random_digit(training_set_tr, training_labels, 3)
 
         six_and_three = np.append(six, three)
-        print("K-Neighbors prediction for vectorized combined image is:", k_neigh_classifier.predict([six_and_three]))
+        print(f"K-Neighbors prediction for vectorized combined image of 6 and 3 is:{k_neigh_classifier.predict([six_and_three])}")
 
         # RandomForestClassifier also works with multi(label/output) classification (multi-dimensional training labels)
         # SGD doesn't
         rnd_forest_classifier = RandomForestClassifier()
         rnd_forest_classifier.fit(training_set_tr_pairs, training_labels_pairs)
 
-        print("Random Forest prediction for vectorized combined image is:", rnd_forest_classifier.predict([six_and_three]))
+        print(f"Random Forest prediction for vectorized combined image of 6 and 3 is:{rnd_forest_classifier.predict([six_and_three])}")
 
         # Attempt to evaluate and compare K_Neighbours and Random Forest classifiers based on confusion matrix
         # in multioutput classification task using the test set with each 2 images merged
