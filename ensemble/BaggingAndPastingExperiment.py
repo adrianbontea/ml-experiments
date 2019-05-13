@@ -20,15 +20,15 @@ class BaggingAndPastingExperiment(ExperimentBase):
         plt.show()
 
         # Binary classification with bagging sampling (each estimator/predictor is trained on a random subset
-        # of the data set with replacement (return the samples back to the set before next sampling)
-        # This obviously means that some instances may be picked up for multiple predictors
+        # of the data set with replacement (return a sample back to the training set before taking the next sample)
+        # This obviously means that some instances may be picked up multiple times in the training set for the same predictor
         # The n_jobs parameter
         # tells Scikit-Learn the number of CPU cores to use for training and predictions
         # (–1 tells Scikit-Learn to use all available cores)
 
         bag_clf = BaggingClassifier(
             DecisionTreeClassifier(), n_estimators=100,
-            max_samples=100, bootstrap=True, n_jobs=-1
+            max_samples=100, bootstrap=True, n_jobs=1
         )
         bag_clf.fit(X, y)
 
@@ -45,12 +45,16 @@ class BaggingAndPastingExperiment(ExperimentBase):
         plt.show()
 
         # Binary classification with pasting sampling (each predictor is trained on a random subset
-        # of the data set without replacement (do not return the samples back to the set before next sampling)
-        # This obviously means that unique instances will be picked up for multiple predictors
+        # of the data set without replacement (do not return the sample back to the set before taking the next sample)
+        # This obviously means that unique instances will be picked up for each predictor
+
+        # Both bagging and pasting allow training instances to be sampled several
+        # times across multiple predictors, but only bagging allows training instances to be
+        # sampled several times for the same predictor
 
         pasting_clf = BaggingClassifier(
-            DecisionTreeClassifier(), n_estimators=10,
-            max_samples=100, bootstrap=False, n_jobs=-1
+            DecisionTreeClassifier(), n_estimators=100,
+            max_samples=100, bootstrap=False, n_jobs=1
         )
         pasting_clf.fit(X, y)
 
