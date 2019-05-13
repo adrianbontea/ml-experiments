@@ -5,6 +5,7 @@ from whitebox import *
 from svm import *
 from decisiontrees import *
 from ensemble import *
+from dimensionality import *
 import dependency_injector.containers as containers
 import dependency_injector.providers as providers
 import sys
@@ -41,14 +42,15 @@ class ExperimentsContainer(containers.DeclarativeContainer):
         "bagging_pasting": providers.Factory(BaggingAndPastingExperiment),
         "random_forest": providers.Factory(RandomForestExperiment),
         "ada_boosting": providers.Factory(AdaBoostingExperiment),
-        "stacking": providers.Factory(StackingExperiment)
+        "stacking": providers.Factory(StackingExperiment),
+        "dimensionality": providers.Factory(DimensionalityReductionExperiment)
     }
-    @staticmethod
-    def get_experiment():
-        if len(sys.argv) > 1 and sys.argv[1] in ExperimentsContainer.experiments:
-            return ExperimentsContainer.experiments[sys.argv[1]]
+    @classmethod
+    def get_experiment(cls):
+        if len(sys.argv) > 1 and sys.argv[1] in cls.experiments:
+            return cls.experiments[sys.argv[1]]
         else:
-            return ExperimentsContainer.experiments["data_analysis"]
+            return cls.experiments["data_analysis"]
 
 
 class RunnersContainer(containers.DeclarativeContainer):
