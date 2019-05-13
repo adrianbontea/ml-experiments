@@ -1,3 +1,3 @@
-from .DimensionalityReductionExperiment import DimensionalityReductionExperiment
+from .dimensionality_reduction import DimensionalityReductionExperiment
 
 __all__ = ["DimensionalityReductionExperiment"]

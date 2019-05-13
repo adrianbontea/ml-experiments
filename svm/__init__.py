@@ -1,6 +1,6 @@
-from .linearsvmclassification import LinearSvmClassificationExperiment
-from .nonlinearsvmclassification import NonLinearSvmClassificationExperiment
-from .linearsvmregression import LinearSvmRegressionExperiment
-from .nonlinearsvmregression import NonLinearSvmRegressionExperiment
+from .linear_svm_classification import LinearSvmClassificationExperiment
+from .non_linear_svm_classification import NonLinearSvmClassificationExperiment
+from .linear_svm_regression import LinearSvmRegressionExperiment
+from .non_linear_svm_regression import NonLinearSvmRegressionExperiment
 
 __all__ = ["LinearSvmClassificationExperiment", "NonLinearSvmClassificationExperiment", "LinearSvmRegressionExperiment", "NonLinearSvmRegressionExperiment"]
