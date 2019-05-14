@@ -2,24 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="afbad002-6eb2-4efd-a8ac-75a5f9b77985" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/californiahousing/TestNotebook.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/californiahousing/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/californiahousing/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/californiahousing/dataanalysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/californiahousing/data_analysis.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ensemble/AdaBoostingExperiment.py" beforeDir="false" afterPath="$PROJECT_DIR$/ensemble/ada_boosting.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ensemble/BaggingAndPastingExperiment.py" beforeDir="false" afterPath="$PROJECT_DIR$/ensemble/bagging_pasting.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ensemble/RandomForestExperiment.py" beforeDir="false" afterPath="$PROJECT_DIR$/ensemble/random_forest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ensemble/StackingExperiment.py" beforeDir="false" afterPath="$PROJECT_DIR$/ensemble/stacking.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ensemble/VotingClassifierExperiment.py" beforeDir="false" afterPath="$PROJECT_DIR$/ensemble/voting.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ensemble/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/ensemble/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/svm/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/svm/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/svm/linearsvmclassification.py" beforeDir="false" afterPath="$PROJECT_DIR$/svm/linear_svm_classification.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/svm/linearsvmregression.py" beforeDir="false" afterPath="$PROJECT_DIR$/svm/linear_svm_regression.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/svm/nonlinearsvmclassification.py" beforeDir="false" afterPath="$PROJECT_DIR$/svm/non_linear_svm_classification.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/svm/nonlinearsvmregression.py" beforeDir="false" afterPath="$PROJECT_DIR$/svm/non_linear_svm_regression.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/whitebox/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/whitebox/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/whitebox/linearregression.py" beforeDir="false" afterPath="$PROJECT_DIR$/whitebox/linear_regression.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/whitebox/logisticregression.py" beforeDir="false" afterPath="$PROJECT_DIR$/whitebox/logistic_regression.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/whitebox/polynomialregression.py" beforeDir="false" afterPath="$PROJECT_DIR$/whitebox/polynomial_regression.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,7 +15,32 @@
     <favorites_list name="ml-experiments" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/californiahousing/data_analysis.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="528">
+              <caret line="57" column="18" lean-forward="true" selection-start-line="52" selection-start-column="8" selection-end-line="57" selection-end-column="18" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/californiahousing/base.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="17" column="15" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="36" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -93,6 +101,7 @@
         <option value="$PROJECT_DIR$/dimensionality/__init__.py" />
         <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/dimensionality/DimensionalityReductionExperiment.py" />
+        <option value="$PROJECT_DIR$/californiahousing/data_analysis.py" />
       </list>
     </option>
   </component>
@@ -107,6 +116,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -117,13 +127,12 @@
             <path>
               <item name="ml-experiments" type="b2602c69:ProjectViewProjectNode" />
               <item name="ml-experiments" type="462c0819:PsiDirectoryNode" />
-              <item name="whitebox" type="462c0819:PsiDirectoryNode" />
+              <item name="californiahousing" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -529,7 +538,14 @@
       <option name="project" value="LOCAL" />
       <updated>1557780506286</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="Renamed some modules for better readability">
+      <created>1557781185780</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1557781185780</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TodoView">
@@ -543,6 +559,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Structure" order="0" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="1" side_tool="true" weight="0.32995737" />
@@ -563,7 +580,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info active="true" anchor="right" content_ui="combo" id="Project" order="3" visible="true" weight="0.29744136" />
+      <window_info anchor="right" content_ui="combo" id="Project" order="3" visible="true" weight="0.30063966" />
     </layout>
     <layout-to-restore>
       <window_info id="Structure" order="0" side_tool="true" weight="0.25" />
@@ -661,7 +678,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Minor adjustment in LogisticRegressionExperiment (print messages)" />
     <MESSAGE value="Train LogisticRegression with all features of iris dataset in LogisticRegressionExperiment" />
     <MESSAGE value="Added Softmax Regression to LogisticRegressionExperiment" />
     <MESSAGE value="Minor adjustments to DataAnalysisExperiment" />
@@ -686,7 +702,8 @@
     <MESSAGE value="Added dockerfile and .dockerignore for building a Docker image" />
     <MESSAGE value="Minor changes for various experiments" />
     <MESSAGE value="Added DimensionalityReductionExperiment" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added DimensionalityReductionExperiment" />
+    <MESSAGE value="Renamed some modules for better readability" />
+    <option name="LAST_COMMIT_MESSAGE" value="Renamed some modules for better readability" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
@@ -738,13 +755,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/sklearn/ensemble/voting_classifier.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="125" column="8" selection-start-line="125" selection-start-column="8" selection-end-line="125" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/sklearn/datasets/samples_generator.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="301">
@@ -766,16 +776,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/base/base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="6" column="54" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="54" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.PyCharmCE2019.1/system/python_stubs/-1246067404/dependency_injector/containers.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1187">
@@ -785,16 +785,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/base/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/whitebox/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="4" column="104" selection-start-line="4" selection-start-column="104" selection-end-line="4" selection-end-column="104" />
-          <folding>
-            <element signature="e#0#56#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.dockerignore">
       <provider selected="true" editor-type-id="text-editor" />
@@ -807,17 +797,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/californiahousing/base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="768">
-          <caret line="32" column="22" lean-forward="true" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/californiahousing/preprocessing.py">
+    <entry file="file://$PROJECT_DIR$/californiahousing/pre_processing.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1245">
           <caret line="62" column="110" selection-start-line="62" selection-start-column="110" selection-end-line="62" selection-end-column="110" />
@@ -925,16 +905,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/californiahousing/data_analysis.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/sklearn/metrics/classification.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="169">
@@ -1006,13 +976,6 @@
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dimensionality/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="87">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
@@ -1105,17 +1068,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1352">
-          <caret line="52" column="49" selection-start-line="52" selection-start-column="49" selection-end-line="52" selection-end-column="49" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dimensionality/DimensionalityReductionExperiment.py">
+    <entry file="file://$PROJECT_DIR$/dimensionality/dimensionality_reduction.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
           <caret line="17" column="147" selection-start-line="17" selection-start-column="147" selection-end-line="17" selection-end-column="147" />
@@ -1166,6 +1119,69 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="17" lean-forward="true" selection-start-column="17" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/whitebox/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="4" column="22" lean-forward="true" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#57#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dimensionality/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/californiahousing/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#49#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-42">
+          <caret line="1" column="12" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/base/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="6" column="54" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="54" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/californiahousing/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="17" column="15" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/californiahousing/data_analysis.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="57" column="18" lean-forward="true" selection-start-line="52" selection-start-column="8" selection-end-line="57" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
