@@ -16,10 +16,10 @@ class LinearRegressionExperiment(ExperimentBase):
         plt.plot(X, y, ".")
         plt.show()
 
-        # Normal equation (Xt * X)pwr(-1) * Xt * y
+        # Normal equation $\Theta=(X^TX)^{-1}X^Ty$
         # The equation gives the value of Theta that minimizes the MSE cost function
-        # Note the inverse of a matrix A noted A pwr(-1) is a matrix in such a way that
-        # A x A pwr(-1) = I (identity matrix = 1 on the main diagonal and all other elements 0)
+        # Note the inverse of a matrix A noted A^{-1} is a matrix in such a way that
+        # A x A^{-1} = I (identity matrix = 1 on the main diagonal and all other elements 0)
         # See this for details of how the inverse of a matrix is computed:
         # https://www.mathsisfun.com/algebra/matrix-inverse.html
         # In numpy this is computed by the inv() function
@@ -64,8 +64,8 @@ class LinearRegressionExperiment(ExperimentBase):
         # to the function curve in a certain point. Hence these partial derivatives are about determining
         # the slope of the cost function with regards to each axis
         # represented by each model parameter, trying to reach a global minimum for the cost function.
-        # For a certain parameter theta j, the partial derivative (gradient) will be: 2/m * Sum i=1 -> m(Theta T * xi - yi)*xi,j (feature j from instance i)
-        # A vector of all these gradients for the whole training set: 2/m * X T *(X * Theta - y)
+        # For a certain parameter theta j, the partial derivative (gradient) will be: $\frac{2}{m}*\sum_{i=1}^m (\theta^T*x^{(i)}-y^{(i)})*x_j^{(i)}$ (feature j from instance i)
+        # A vector of all these gradients for the whole training set: $\frac{2}{m}*X^T*(X*\theta - y)$
 
         # This is why the algorithm is called Batch Gradient Descent: it uses the whole batch of training
         # data at every step. As a result it is terribly slow on very large training
