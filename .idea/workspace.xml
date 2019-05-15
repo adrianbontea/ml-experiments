@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="afbad002-6eb2-4efd-a8ac-75a5f9b77985" name="Default Changelist" comment="Jupyter Notebook rendering test on GitHub">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notebooks/.ipynb_checkpoints/california_housing_data_analysis-checkpoint.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/notebooks/.ipynb_checkpoints/california_housing_models-checkpoint.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/notebooks/california_housing_data_analysis.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/notebooks/california_housing_models.ipynb" beforeDir="false" />
-    </list>
+    <list default="true" id="afbad002-6eb2-4efd-a8ac-75a5f9b77985" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,11 +94,6 @@
             <path>
               <item name="ml-experiments" type="b2602c69:ProjectViewProjectNode" />
               <item name="ml-experiments" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ml-experiments" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ml-experiments" type="462c0819:PsiDirectoryNode" />
-              <item name="californiahousing" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -516,7 +505,14 @@
       <option name="project" value="LOCAL" />
       <updated>1557780506286</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="Moved notebooks for California Housing experiments to the corresponding folder and applied markdown formatting">
+      <created>1557904531826</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1557904531826</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TodoView">
@@ -541,7 +537,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32936078" />
       <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49946696" weight="0.44637054" />
-      <window_info active="true" anchor="bottom" x="22" y="368" width="1876" height="304" id="Terminal" order="8" sideWeight="0.49946696" visible="true" weight="0.3281471" />
+      <window_info anchor="bottom" x="22" y="368" width="1876" height="304" id="Terminal" order="8" sideWeight="0.49946696" weight="0.3281471" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50053304" side_tool="true" weight="0.32936078" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32936078" />
       <window_info anchor="bottom" id="GitHub Pull Requests" order="11" weight="0.32936078" />
@@ -550,7 +546,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Project" order="3" visible="true" weight="0.21179625" />
+      <window_info active="true" anchor="right" content_ui="combo" id="Project" order="3" visible="true" weight="0.21179625" />
     </layout>
     <layout-to-restore>
       <window_info id="Structure" order="0" side_tool="true" weight="0.25" />
@@ -648,7 +644,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Minor adjustment in LogisticRegressionExperiment (print messages)" />
     <MESSAGE value="Train LogisticRegression with all features of iris dataset in LogisticRegressionExperiment" />
     <MESSAGE value="Added Softmax Regression to LogisticRegressionExperiment" />
     <MESSAGE value="Minor adjustments to DataAnalysisExperiment" />
@@ -673,7 +668,8 @@
     <MESSAGE value="Added dockerfile and .dockerignore for building a Docker image" />
     <MESSAGE value="Minor changes for various experiments" />
     <MESSAGE value="Added DimensionalityReductionExperiment" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added DimensionalityReductionExperiment" />
+    <MESSAGE value="Moved notebooks for California Housing experiments to the corresponding folder and applied markdown formatting" />
+    <option name="LAST_COMMIT_MESSAGE" value="Moved notebooks for California Housing experiments to the corresponding folder and applied markdown formatting" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
