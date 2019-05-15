@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="afbad002-6eb2-4efd-a8ac-75a5f9b77985" name="Default Changelist" comment="Multioutput classification experiment as a Jupyter notebook">
+    <list default="true" id="afbad002-6eb2-4efd-a8ac-75a5f9b77985" name="Default Changelist" comment="White-box logistic regression experiment as a Jupyter notebook">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/whitebox/linear_regression.py" beforeDir="false" afterPath="$PROJECT_DIR$/whitebox/linear_regression.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,10 +17,10 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/whitebox/linear_regression.py">
+        <entry file="file://$PROJECT_DIR$/whitebox/polynomial_regression.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1317">
-              <caret line="139" column="88" lean-forward="true" selection-start-line="126" selection-start-column="8" selection-end-line="139" selection-end-column="88" />
+            <state relative-caret-position="707">
+              <caret line="37" column="43" lean-forward="true" selection-start-line="31" selection-start-column="8" selection-end-line="37" selection-end-column="43" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
               </folding>
@@ -92,6 +91,7 @@
         <option value="$PROJECT_DIR$/dimensionality/DimensionalityReductionExperiment.py" />
         <option value="$PROJECT_DIR$/californiahousing/data_analysis.py" />
         <option value="$PROJECT_DIR$/whitebox/linear_regression.py" />
+        <option value="$PROJECT_DIR$/whitebox/logistic_regression.py" />
       </list>
     </option>
   </component>
@@ -226,20 +226,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1551725702535</updated>
-    </task>
-    <task id="LOCAL-00002" summary="ClassificationExperimentBase wrapping mnist module to download and parse the MNSIT data and skeleton for the first BinaryClassificationExperiment concrete implementation">
-      <created>1551815009430</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1551815009430</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Extended BinaryClassificationExperiment with binary classification of MNIST images (5 and not 5) based on Stochastic Gradient Descent Classifier">
-      <created>1551899772604</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1551899772604</updated>
     </task>
     <task id="LOCAL-00004" summary="Introduced performance metrics in binary classification (confusion matrix, precision, sensitivity and f1 score)">
       <created>1551902971523</created>
@@ -570,7 +556,21 @@
       <option name="project" value="LOCAL" />
       <updated>1557947947322</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="White-box linear regression experiment as a Jupyter notebook">
+      <created>1557951225688</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1557951225688</updated>
+    </task>
+    <task id="LOCAL-00052" summary="White-box logistic regression experiment as a Jupyter notebook">
+      <created>1557951859980</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1557951859980</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TodoView">
@@ -703,8 +703,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added plots (vector instances with different colors for labels) to linear and non-linear SVM classification experiments" />
-    <MESSAGE value="Added more experiments to linear and non-linear SVM classification and decision region plotting via mlxtend" />
     <MESSAGE value="Added SGD Classifier to NonLinearSvmClassificationExperiment and confusion matrix computing to compare Random Forest, SGD and K-Nearest Neighbours" />
     <MESSAGE value="Added linear and non-linear SVM regression experiments" />
     <MESSAGE value="Added DecisionTreeVisualizationExperiment" />
@@ -728,7 +726,9 @@
     <MESSAGE value="Multiclass classification experiment as a Jupyter notebook" />
     <MESSAGE value="Multilabel classification experiment as a Jupyter notebook" />
     <MESSAGE value="Multioutput classification experiment as a Jupyter notebook" />
-    <option name="LAST_COMMIT_MESSAGE" value="Multioutput classification experiment as a Jupyter notebook" />
+    <MESSAGE value="White-box linear regression experiment as a Jupyter notebook" />
+    <MESSAGE value="White-box logistic regression experiment as a Jupyter notebook" />
+    <option name="LAST_COMMIT_MESSAGE" value="White-box logistic regression experiment as a Jupyter notebook" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
@@ -780,20 +780,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/numpy/core/numeric.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="537" selection-start-line="537" selection-end-line="537" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharmCE2019.1/system/python_stubs/-1246067404/numpy/random/mtrand.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="1983" column="4" selection-start-line="1983" selection-start-column="4" selection-end-line="1983" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/decisiontrees/regularization.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="600">
@@ -1161,26 +1147,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/whitebox/logistic_regression.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="901">
-          <caret line="53" column="152" selection-start-line="53" selection-start-column="152" selection-end-line="53" selection-end-column="152" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/whitebox/polynomial_regression.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="36" column="69" selection-start-line="36" selection-start-column="69" selection-end-line="36" selection-end-column="69" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/svm/linear_svm_classification.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1190">
@@ -1195,6 +1161,32 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1317">
           <caret line="139" column="88" lean-forward="true" selection-start-line="126" selection-start-column="8" selection-end-line="139" selection-end-column="88" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/whitebox/logistic_regression.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="704">
+          <caret line="53" column="155" selection-start-line="53" selection-start-column="155" selection-end-line="53" selection-end-column="155" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/base/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/numpy/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/whitebox/polynomial_regression.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="707">
+          <caret line="37" column="43" lean-forward="true" selection-start-line="31" selection-start-column="8" selection-end-line="37" selection-end-column="43" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>
