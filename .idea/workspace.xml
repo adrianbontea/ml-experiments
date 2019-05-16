@@ -17,12 +17,12 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ensemble/bagging_pasting.py">
+        <entry file="file://$PROJECT_DIR$/ensemble/ada_boosting.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="48" column="89" lean-forward="true" selection-start-line="46" selection-start-column="10" selection-end-line="48" selection-end-column="89" />
+            <state relative-caret-position="707">
+              <caret line="61" column="81" lean-forward="true" selection-start-line="58" selection-start-column="8" selection-end-line="61" selection-end-column="81" />
               <folding>
-                <element signature="e#0#31#0" expanded="true" />
+                <element signature="e#0#47#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -94,6 +94,7 @@
         <option value="$PROJECT_DIR$/whitebox/logistic_regression.py" />
         <option value="$PROJECT_DIR$/svm/linear_svm_classification.py" />
         <option value="$PROJECT_DIR$/svm/linear_svm_regression.py" />
+        <option value="$PROJECT_DIR$/ensemble/ada_boosting.py" />
       </list>
     </option>
   </component>
@@ -228,13 +229,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1551725702535</updated>
-    </task>
-    <task id="LOCAL-00014" summary="Added fitting based on Mini-Batch Grading Descent to the white-box LinearRegressionExperiment">
-      <created>1552937880101</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1552937880101</updated>
     </task>
     <task id="LOCAL-00015" summary="Added PolynomialRegressionExperiment">
       <created>1552940857141</created>
@@ -572,7 +566,14 @@
       <option name="project" value="LOCAL" />
       <updated>1558036833641</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="Ensemble methods bagging-pasting experiment as a Jupyter notebook">
+      <created>1558037458049</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1558037458049</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="TodoView">
@@ -705,7 +706,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added RandomForestExperiment" />
     <MESSAGE value="Added AdaBoostingExperiment" />
     <MESSAGE value="Added StackingExperiment" />
     <MESSAGE value="Adjusted main module to be able to pass the experiment to run as a command line argument" />
@@ -730,7 +730,8 @@
     <MESSAGE value="Adjusted DecisionTree regularization experiment as a Jupyter notebook" />
     <MESSAGE value="DecisionTree visualization experiment as a Jupyter notebook" />
     <MESSAGE value="Ensemble methods voting experiment as a Jupyter notebook" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ensemble methods voting experiment as a Jupyter notebook" />
+    <MESSAGE value="Ensemble methods bagging-pasting experiment as a Jupyter notebook" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ensemble methods bagging-pasting experiment as a Jupyter notebook" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
@@ -782,23 +783,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/classification/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="189" selection-start-line="6" selection-start-column="189" selection-end-line="6" selection-end-column="189" />
-          <folding>
-            <element signature="e#0#50#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ensemble/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="41" selection-start-line="4" selection-start-column="41" selection-end-line="4" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/svm/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -1161,10 +1145,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ensemble/bagging_pasting.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="48" column="89" lean-forward="true" selection-start-line="46" selection-start-column="10" selection-end-line="48" selection-end-column="89" />
+        <state relative-caret-position="216">
+          <caret line="63" lean-forward="true" selection-start-line="63" selection-end-line="63" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ensemble/random_forest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#55#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ensemble/ada_boosting.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="707">
+          <caret line="61" column="81" lean-forward="true" selection-start-line="58" selection-start-column="8" selection-end-line="61" selection-end-column="81" />
+          <folding>
+            <element signature="e#0#47#0" expanded="true" />
           </folding>
         </state>
       </provider>
