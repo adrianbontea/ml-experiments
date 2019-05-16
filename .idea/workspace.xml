@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="afbad002-6eb2-4efd-a8ac-75a5f9b77985" name="Default Changelist" comment="DecisionTree regression experiment as a Jupyter notebook">
+    <list default="true" id="afbad002-6eb2-4efd-a8ac-75a5f9b77985" name="Default Changelist" comment="DecisionTree visualization experiment as a Jupyter notebook">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,12 +17,12 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/decisiontrees/regularization.py">
+        <entry file="file://$PROJECT_DIR$/ensemble/voting.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
-              <caret line="45" column="18" lean-forward="true" selection-start-line="40" selection-start-column="8" selection-end-line="45" selection-end-column="18" />
+            <state relative-caret-position="597">
+              <caret line="35" column="79" lean-forward="true" selection-start-line="32" selection-start-column="8" selection-end-line="35" selection-end-column="79" />
               <folding>
-                <element signature="e#0#31#0" expanded="true" />
+                <element signature="e#0#55#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -119,7 +119,7 @@
             <path>
               <item name="ml-experiments" type="b2602c69:ProjectViewProjectNode" />
               <item name="ml-experiments" type="462c0819:PsiDirectoryNode" />
-              <item name="decisiontrees" type="462c0819:PsiDirectoryNode" />
+              <item name="ensemble" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -228,27 +228,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1551725702535</updated>
-    </task>
-    <task id="LOCAL-00010" summary="MultioutputClassificationExperiment and adjusted MultilabelClassificationExperiment">
-      <created>1552422007195</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1552422007195</updated>
-    </task>
-    <task id="LOCAL-00011" summary="White box-type experiment with a linear regression model fitting based on normal equation">
-      <created>1552593129886</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1552593129886</updated>
-    </task>
-    <task id="LOCAL-00012" summary="Added training set fit based on Batch Gradient Descent to the LinearRegressionExperiment">
-      <created>1552746491324</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1552746491324</updated>
     </task>
     <task id="LOCAL-00013" summary="Added fitting based on Stochastic Grading Descent to the white-box LinearRegressionExperiment">
       <created>1552751110042</created>
@@ -572,7 +551,28 @@
       <option name="project" value="LOCAL" />
       <updated>1558034292103</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="DecisionTree regularization experiment as a Jupyter notebook">
+      <created>1558034836395</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1558034836395</updated>
+    </task>
+    <task id="LOCAL-00060" summary="Adjusted DecisionTree regularization experiment as a Jupyter notebook">
+      <created>1558034900616</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1558034900616</updated>
+    </task>
+    <task id="LOCAL-00061" summary="DecisionTree visualization experiment as a Jupyter notebook">
+      <created>1558035775143</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1558035775143</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
     <servers />
   </component>
   <component name="TodoView">
@@ -585,7 +585,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Structure" order="0" side_tool="true" weight="0.25" />
@@ -705,9 +705,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added DecisionTreeRegressionExperiment" />
-    <MESSAGE value="Added EnsembleLearningExperiment" />
-    <MESSAGE value="Renamed EnsembleLearningExperiment to VotingClassifierExperiment" />
     <MESSAGE value="Added BaggingAndPastingExperiment" />
     <MESSAGE value="Added RandomForestExperiment" />
     <MESSAGE value="Added AdaBoostingExperiment" />
@@ -730,7 +727,10 @@
     <MESSAGE value="Non-linear SVM classification experiment as a Jupyter notebook" />
     <MESSAGE value="Non-linear SVM regression experiment as a Jupyter notebook" />
     <MESSAGE value="DecisionTree regression experiment as a Jupyter notebook" />
-    <option name="LAST_COMMIT_MESSAGE" value="DecisionTree regression experiment as a Jupyter notebook" />
+    <MESSAGE value="DecisionTree regularization experiment as a Jupyter notebook" />
+    <MESSAGE value="Adjusted DecisionTree regularization experiment as a Jupyter notebook" />
+    <MESSAGE value="DecisionTree visualization experiment as a Jupyter notebook" />
+    <option name="LAST_COMMIT_MESSAGE" value="DecisionTree visualization experiment as a Jupyter notebook" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
@@ -782,13 +782,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/numpy/lib/shape_base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="715" column="4" selection-start-line="715" selection-start-column="4" selection-end-line="715" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/classification/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -966,16 +959,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/classification/base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="445">
-          <caret line="24" column="76" selection-start-line="22" selection-start-column="4" selection-end-line="24" selection-end-column="76" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/whitebox/linear_regression.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1317">
@@ -1119,15 +1102,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/decisiontrees/visualization.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-551">
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/decisiontrees/regression.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="720">
@@ -1154,10 +1128,40 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/decisiontrees/regularization.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="45" column="18" lean-forward="true" selection-start-line="40" selection-start-column="8" selection-end-line="45" selection-end-column="18" />
+        <state relative-caret-position="696">
+          <caret line="53" column="18" lean-forward="true" selection-start-line="48" selection-start-column="8" selection-end-line="53" selection-end-column="18" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/decisiontrees/visualization.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="477">
+          <caret line="113" column="76" lean-forward="true" selection-start-line="113" selection-start-column="76" selection-end-line="113" selection-end-column="76" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classification/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="58" lean-forward="true" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="58" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ensemble/voting.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="597">
+          <caret line="35" column="79" lean-forward="true" selection-start-line="32" selection-start-column="8" selection-end-line="35" selection-end-column="79" />
+          <folding>
+            <element signature="e#0#55#0" expanded="true" />
           </folding>
         </state>
       </provider>
