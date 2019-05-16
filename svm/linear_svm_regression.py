@@ -10,8 +10,8 @@ class LinearSvmRegressionExperiment(ExperimentBase):
         # Note: X is a ndarray of shape (100,1) simulating a training set of 100 instances with one feature each
         # y is a ndarray of shape (100,1) simulating the labels for the 100 training instances
         # y is a linear-ish model introducing some noise (+ np.random.randn(100, 1)) to the linear equation (y = ax + b)
-        X = 2 * np.random.uniform(1, 5, (100, 1))
-        y = 4 + 3 * X + np.random.uniform(1, 5, (100, 1))
+        X = 2 * np.random.rand(100, 1)
+        y = 4 + 3 * X + np.random.rand(100, 1)
 
         plt.plot(X, y, ".")
         plt.show()

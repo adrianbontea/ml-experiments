@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="afbad002-6eb2-4efd-a8ac-75a5f9b77985" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/svm/linear_svm_regression.py" beforeDir="false" afterPath="$PROJECT_DIR$/svm/linear_svm_regression.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,10 +18,10 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/svm/linear_svm_classification.py">
+        <entry file="file://$PROJECT_DIR$/svm/linear_svm_regression.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="60" lean-forward="true" selection-start-line="53" selection-start-column="8" selection-end-line="60" />
+            <state relative-caret-position="624">
+              <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
               </folding>
@@ -93,6 +94,7 @@
         <option value="$PROJECT_DIR$/whitebox/linear_regression.py" />
         <option value="$PROJECT_DIR$/whitebox/logistic_regression.py" />
         <option value="$PROJECT_DIR$/svm/linear_svm_classification.py" />
+        <option value="$PROJECT_DIR$/svm/linear_svm_regression.py" />
       </list>
     </option>
   </component>
@@ -227,13 +229,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1551725702535</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Minor formatting">
-      <created>1551904195759</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1551904195759</updated>
     </task>
     <task id="LOCAL-00006" summary="Finished BinaryClassificationExperiment with Precision-Recall(Sensitivity) Tradeoff">
       <created>1551993311821</created>
@@ -571,7 +566,14 @@
       <option name="project" value="LOCAL" />
       <updated>1557952381253</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="Linear SVM classification experiment as a Jupyter notebook">
+      <created>1558032045244</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1558032045244</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TodoView">
@@ -704,7 +706,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added SGD Classifier to NonLinearSvmClassificationExperiment and confusion matrix computing to compare Random Forest, SGD and K-Nearest Neighbours" />
     <MESSAGE value="Added linear and non-linear SVM regression experiments" />
     <MESSAGE value="Added DecisionTreeVisualizationExperiment" />
     <MESSAGE value="Added basic multiclass predictions (classes probabilities and class name) to DecisionTreeVisualizationExperiment" />
@@ -729,7 +730,8 @@
     <MESSAGE value="Multioutput classification experiment as a Jupyter notebook" />
     <MESSAGE value="White-box linear regression experiment as a Jupyter notebook" />
     <MESSAGE value="White-box logistic regression experiment as a Jupyter notebook" />
-    <option name="LAST_COMMIT_MESSAGE" value="White-box logistic regression experiment as a Jupyter notebook" />
+    <MESSAGE value="Linear SVM classification experiment as a Jupyter notebook" />
+    <option name="LAST_COMMIT_MESSAGE" value="Linear SVM classification experiment as a Jupyter notebook" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
@@ -781,30 +783,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/decisiontrees/visualization.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1196">
-          <caret line="41" column="21" lean-forward="true" selection-start-line="41" selection-start-column="10" selection-end-line="41" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dockerfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/numpy/linalg/linalg.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="1611" selection-start-line="1611" selection-end-line="1611" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.PyCharmCE2019.1/system/python_stubs/-1246067404/builtins.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="299">
@@ -1093,16 +1071,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/svm/linear_svm_regression.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="31" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/svm/non_linear_svm_regression.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -1151,13 +1119,44 @@
     <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/sklearn/preprocessing/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/sklearn/svm/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/svm/linear_svm_classification.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="60" lean-forward="true" selection-start-line="53" selection-start-column="8" selection-end-line="60" />
+        <state relative-caret-position="261">
+          <caret line="54" column="39" lean-forward="true" selection-start-line="54" selection-start-column="39" selection-end-line="54" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/sklearn/svm/classes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="401">
+          <caret line="247" column="6" selection-start-line="247" selection-start-column="6" selection-end-line="247" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/sklearn/svm/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/numpy/random/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharmCE2019.1/system/python_stubs/-1246067404/numpy/random/mtrand.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="1984" column="4" selection-start-line="1984" selection-start-column="4" selection-end-line="1984" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/svm/linear_svm_regression.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="624">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>
