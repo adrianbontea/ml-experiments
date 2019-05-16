@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="afbad002-6eb2-4efd-a8ac-75a5f9b77985" name="Default Changelist" comment="DecisionTree visualization experiment as a Jupyter notebook">
+    <list default="true" id="afbad002-6eb2-4efd-a8ac-75a5f9b77985" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,12 +17,12 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ensemble/voting.py">
+        <entry file="file://$PROJECT_DIR$/ensemble/bagging_pasting.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="597">
-              <caret line="35" column="79" lean-forward="true" selection-start-line="32" selection-start-column="8" selection-end-line="35" selection-end-column="79" />
+            <state relative-caret-position="288">
+              <caret line="48" column="89" lean-forward="true" selection-start-line="46" selection-start-column="10" selection-end-line="48" selection-end-column="89" />
               <folding>
-                <element signature="e#0#55#0" expanded="true" />
+                <element signature="e#0#31#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -228,13 +228,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1551725702535</updated>
-    </task>
-    <task id="LOCAL-00013" summary="Added fitting based on Stochastic Grading Descent to the white-box LinearRegressionExperiment">
-      <created>1552751110042</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1552751110042</updated>
     </task>
     <task id="LOCAL-00014" summary="Added fitting based on Mini-Batch Grading Descent to the white-box LinearRegressionExperiment">
       <created>1552937880101</created>
@@ -572,7 +565,14 @@
       <option name="project" value="LOCAL" />
       <updated>1558035775143</updated>
     </task>
-    <option name="localTasksCounter" value="62" />
+    <task id="LOCAL-00062" summary="Ensemble methods voting experiment as a Jupyter notebook">
+      <created>1558036833641</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1558036833641</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="TodoView">
@@ -585,7 +585,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Structure" order="0" side_tool="true" weight="0.25" />
@@ -705,7 +705,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added BaggingAndPastingExperiment" />
     <MESSAGE value="Added RandomForestExperiment" />
     <MESSAGE value="Added AdaBoostingExperiment" />
     <MESSAGE value="Added StackingExperiment" />
@@ -730,7 +729,8 @@
     <MESSAGE value="DecisionTree regularization experiment as a Jupyter notebook" />
     <MESSAGE value="Adjusted DecisionTree regularization experiment as a Jupyter notebook" />
     <MESSAGE value="DecisionTree visualization experiment as a Jupyter notebook" />
-    <option name="LAST_COMMIT_MESSAGE" value="DecisionTree visualization experiment as a Jupyter notebook" />
+    <MESSAGE value="Ensemble methods voting experiment as a Jupyter notebook" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ensemble methods voting experiment as a Jupyter notebook" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
@@ -919,13 +919,6 @@
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ensemble/bagging_pasting.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="47" />
         </state>
       </provider>
     </entry>
@@ -1158,10 +1151,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ensemble/voting.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="597">
-          <caret line="35" column="79" lean-forward="true" selection-start-line="32" selection-start-column="8" selection-end-line="35" selection-end-column="79" />
+        <state relative-caret-position="693">
+          <caret line="39" column="34" selection-start-line="39" selection-start-column="8" selection-end-line="39" selection-end-column="34" />
           <folding>
             <element signature="e#0#55#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ensemble/bagging_pasting.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="48" column="89" lean-forward="true" selection-start-line="46" selection-start-column="10" selection-end-line="48" selection-end-column="89" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
           </folding>
         </state>
       </provider>
