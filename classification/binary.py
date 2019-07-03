@@ -25,14 +25,14 @@ class BinaryClassificationExperiment(ClassificationExperimentBase):
         some_digit = training_set_tr[index_of_five, ]
         super().show_digit(some_digit)
 
-        print("some_digit is a 5:", sgd_classifier.predict([some_digit]))
+        print(f"some_digit is a 5: {sgd_classifier.predict([some_digit])}")
 
         # Pick a not five
         index_of_not_five = self.__get_index_of_random_false(five_binary_labels)
         some_digit = training_set_tr[index_of_not_five, ]
         super().show_digit(some_digit)
 
-        print("some_digit is a 5:", sgd_classifier.predict([some_digit]))
+        print(f"some_digit is a 5: {sgd_classifier.predict([some_digit])}")
 
         # Evaluate the current SGD classifier
         y_train_pred = cross_val_predict(sgd_classifier, training_set_tr, five_binary_labels, cv=3)
