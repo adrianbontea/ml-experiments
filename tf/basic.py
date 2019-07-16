@@ -35,3 +35,12 @@ class BasicTensorFlowExperiment(ExperimentBase):
             init.run()
             result = f.eval()
             print(result)
+
+        x = tf.placeholder(tf.int32)
+        y = tf.Variable(7, name="y")
+        f = x + y + 1
+
+        with tf.Session() as sess:
+            y.initializer.run()
+            result = sess.run(f, feed_dict={x: [1, 2, 3]})
+            print(result)
