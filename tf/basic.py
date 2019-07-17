@@ -36,12 +36,15 @@ class BasicTensorFlowExperiment(ExperimentBase):
             result = f.eval()
             print(result)
 
-        x = tf.placeholder(tf.int32)
+        x = tf.placeholder(tf.int32, shape=(None, 3))  # x is set with bi-dimensional shape but first size of the shape is not specified - could be anything
         y = tf.Variable(7, name="y")
-        z = tf.placeholder(tf.int32)
+        z = tf.placeholder(tf.int32, shape=(3,))
         f = x + y + z + 1
 
         with tf.Session() as sess:
             y.initializer.run()
-            result = sess.run(f, feed_dict={x: [1, 2, 3], z: [1, 1, 1]})
-            print(result)
+            result = sess.run(f, feed_dict={x: [[1, 2, 3]], z: [1, 1, 1]})  # x of shape (1,3)
+            print(f"Result for x of shape(1,3): {result}")  # result of shape (1,3)
+
+            result = sess.run(f, feed_dict={x: [[1, 2, 3], [4, 5, 6]], z: [1, 1, 1]})  # x of shape (2,3)
+            print(f"Result for x of shape(2,3): {result}") # result of shape (2,3)
