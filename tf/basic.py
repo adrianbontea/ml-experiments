@@ -48,3 +48,26 @@ class BasicTensorFlowExperiment(ExperimentBase):
 
             result = sess.run(f, feed_dict={x: [[1, 2, 3], [4, 5, 6]], z: [1, 1, 1]})  # x of shape (2,3)
             print(f"Result for x of shape(2,3): {result}") # result of shape (2,3)
+
+        # Save a graph
+        graph = tf.Graph()
+
+        with graph.as_default():
+            y = tf.Variable(5, name="y")
+            saver = tf.train.Saver()
+
+            with tf.Session() as sess:
+                y.initializer.run()
+                saver.save(sess, "BasicTensorFlowExperiment.dat")
+
+        # Restore to a new graph
+        graph2 = tf.Graph()
+
+        with graph2.as_default():
+            y = tf.Variable(0, name="y")
+            saver = tf.train.Saver()
+
+            with tf.Session() as sess:
+                saver.restore(sess, "BasicTensorFlowExperiment.dat")
+                f = y + 1  # y doesn't need to be initialized anymore as it's being restored with value 5 (from previous initialization) from disk persistence
+                print(f.eval())
