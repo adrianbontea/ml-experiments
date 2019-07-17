@@ -1,5 +1,6 @@
 from base import ExperimentBase
 import tensorflow as tf
+from datetime import datetime
 
 
 class BasicTensorFlowExperiment(ExperimentBase):
@@ -71,3 +72,15 @@ class BasicTensorFlowExperiment(ExperimentBase):
                 saver.restore(sess, "BasicTensorFlowExperiment.dat")
                 f = y + 1  # y doesn't need to be initialized anymore as it's being restored with value 5 (from previous initialization) from disk persistence
                 print(f.eval())
+
+        # Visualize graphs
+        graph3 = tf.Graph()
+        with graph3.as_default():
+            x = tf.Variable(3, name="x")
+            y = tf.Variable(5, name="y")
+            with tf.name_scope("Function") as scope:  # Group all operations inside a scope named "Function". Variables will be represented outside this scope
+                f = x*x*y + 2*x*y + 5
+
+            log_dir = f"tf_logs\\run-{datetime.utcnow().strftime('%Y%m%d%H%M%S')}\\"
+            writer = tf.compat.v1.summary.FileWriter(log_dir, graph3)
+            writer.close()
